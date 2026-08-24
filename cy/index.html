@@ -153,6 +153,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -175,6 +178,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -421,7 +425,7 @@ table.cmp td b{font-weight:700}
       <p class="lede">Adeiladwyd tua thraean o gartrefi Cymru cyn 1919, mewn gwlad sy'n cael mwy o law nag unman arall ym Mhrydain. Adeiladwyd y waliau hynny i anadlu, ac ers hynny mae'r rhan fwyaf ohonynt wedi'u selio â sment. Rydym yn arolygu'n gyntaf, nid ydym yn gwerthu cemegau, a'ch adroddiad chi ydyw i weithredu arno.</p>
       <div class="btnrow">
         <a class="btn btn--go" href="/cy/request">Gofyn am arolwg</a>
-        <a class="btn btn--ghost-d" href="/cy/landlords">WHQS duties for landlords</a>
+        <a class="btn btn--ghost-d" href="/cy/landlords">Dyletswyddau SATC i landlordiaid</a>
       </div>
     </div>
     <div><div class="wall">
@@ -491,7 +495,7 @@ table.cmp td b{font-weight:700}
   </svg>
   <div class="readout">
     <span>WME</span><b id="wme">0.0</b><span>%</span>
-    <span class="desc" id="walldesc">Tap a marker. Wood moisture equivalent at skirting level, 300&nbsp;mm above floor.</span>
+    <span class="desc" id="walldesc">Tapiwch farciwr. Cywerth lleithder pren ar lefel sgyrtin, 300&nbsp;mm uwchlaw'r llawr.</span>
   </div>
 </div></div>
   </div>
@@ -509,19 +513,19 @@ table.cmp td b{font-weight:700}
 
 <div class="band">
   <div class="wrap">
-    <p class="eyebrow">Three problems, one symptom</p>
+    <p class="eyebrow">Tair problem, un symptom</p>
     <h2 style="max-width:19ch">Diagnosis yw lleithder, nid cynnyrch.</h2>
     <p class="lede" style="margin-bottom:44px">Gall ôl llanw ar deras yn y Rhondda fod yn bedwar peth gwahanol. Mae cwrs atal lleithder wedi'i chwistrellu yn trwsio un ohonynt yn union. Dyma'r hyn rydym yn ei wahanu wrth arolygu.</p>
     <div class="cols cols-3">
       <div class="diag">
         <p class="sig">Dŵr daear yn codi trwy weithred capilari</p>
-        <h3>Rising damp</h3>
+        <h3>Lleithder sy'n codi</h3>
         <p>Anghyffredin mewn gwirionedd, ac wedi'i or-ddiagnosio ers hanner canrif. Mae'n stopio wrth linell llanw lorweddol, fel arfer o dan fetr, ac mae'n cario halwynau'r ddaear sy'n blodeuo trwy'r plastr. Ar waliau carreg solet mae'r achos yn amlach yn lefel tir allanol uchel, cwrs wedi'i bontio, neu awyrell o dan y llawr wedi'i rhwystro nag un sydd wedi methu.</p>
       </div>
       <div class="diag">
-        <p class="sig">Water crossing the wall from outside</p>
+        <p class="sig">Dŵr yn croesi'r wal o'r tu allan</p>
         <h3>Lleithder treiddiol</h3>
-        <p>The most common cause of a damp Welsh wall, and the one this country produces at scale. Cracked cement render on a rubble stone wall, failed pointing, a split downpipe, a slipped slate, a defective chimney flashing. It appears at the point of failure and worsens after rain rather than following the seasons.</p>
+        <p>Achos mwyaf cyffredin wal laith Gymreig, a'r un y mae'r wlad hon yn ei gynhyrchu ar raddfa. Rendr sment wedi cracio ar wal garreg rwbel, pwyntio wedi methu, pibell ddŵr wedi hollti, llechen wedi llithro, fflachiad simnai diffygiol. Mae'n ymddangos wrth y pwynt methu ac yn gwaethygu ar ôl glaw yn hytrach na dilyn y tymhorau.</p>
       </div>
       <div class="diag">
         <p class="sig">Lleithder a gynhyrchir y tu mewn i'r adeilad</p>
@@ -535,24 +539,24 @@ table.cmp td b{font-weight:700}
 
 <div class="band band--slate">
   <div class="wrap">
-    <p class="eyebrow">The Welsh failure mode</p>
+    <p class="eyebrow">Y modd methu Cymreig</p>
     <h2 style="color:var(--stone);max-width:22ch">Rendr sment ar wal a adeiladwyd i anadlu.</h2>
     <p class="lede" style="max-width:62ch">Nid oes gan wal garreg solet geudod na chwrs atal lleithder. Ni fwriadwyd iddi fod yn sych erioed — bwriadwyd iddi dderbyn dŵr a'i roi'n ôl allan trwy forter calch a rendr calch. Seliwch y wal honno mewn rendr sment a phaent maen plastig, fel y gwnaeth y rhan fwyaf o Gymru rhwng 1960 a 1990, ac mae'r dŵr yn dal i ddod i mewn trwy bob crac ond ni all ddod allan mwyach.</p>
-    <p class="lede" style="max-width:62ch">The result reads exactly like rising damp on a meter, gets treated as rising damp, and comes straight back. Identifying which of the two you actually have is most of the value of a survey.</p>
-    <div class="btnrow"><a class="btn btn--ghost-d" href="/cy/damp">The full diagnosis method</a></div>
+    <p class="lede" style="max-width:62ch">Mae'r canlyniad yn darllen yn union fel lleithder sy'n codi ar fesurydd, yn cael ei drin fel lleithder sy'n codi, ac yn dod yn ôl yn syth. Adnabod pa un o'r ddau sydd gennych mewn gwirionedd yw'r rhan fwyaf o werth arolwg.</p>
+    <div class="btnrow"><a class="btn btn--ghost-d" href="/cy/damp">Y dull diagnosis llawn</a></div>
   </div>
 </div>
 
 <div class="band band--tight" style="border-top:1px solid var(--line)">
   <div class="wrap">
-    <p class="eyebrow">What we do</p>
+    <p class="eyebrow">Beth rydym yn ei wneud</p>
     <div class="cols cols-3" style="margin-top:6px">
       <a class="card" href="/cy/surveys"><span class="tag">01 &middot; Arolwg</span><h3>Arolwg lleithder annibynnol</h3><p>Proffil lleithder llawn, dadansoddi halwynau lle bo angen, arolygiad diffygion allanol, adroddiad ffotograffig gydag amserlen waith gostiedig.</p></a>
-      <a class="card" href="/cy/timber"><span class="tag">02 &middot; Arolwg</span><h3>Timber decay inspection</h3><p>Pydredd sych, pydredd gwlyb a phryf pren. Pennau trawstiau, platiau wal, pren o dan y llawr, seleri, mannau to a'r maint cudd y tu ôl i'r plastr.</p></a>
-      <a class="card" href="/cy/surveys"><span class="tag">03 &middot; Arolwg</span><h3>Adroddiadau cyn prynu a chadw'n ôl</h3><p>Where a RICS survey flags dampness and a lender holds a retention, we produce the specialist report with the costed schedule that releases it.</p></a>
+      <a class="card" href="/cy/timber"><span class="tag">02 &middot; Arolwg</span><h3>Arolygiad pydredd pren</h3><p>Pydredd sych, pydredd gwlyb a phryf pren. Pennau trawstiau, platiau wal, pren o dan y llawr, seleri, mannau to a'r maint cudd y tu ôl i'r plastr.</p></a>
+      <a class="card" href="/cy/surveys"><span class="tag">03 &middot; Arolwg</span><h3>Adroddiadau cyn prynu a chadw'n ôl</h3><p>Lle mae arolwg RICS yn nodi lleithder a benthyciwr yn dal cadw'n ôl, rydym yn cynhyrchu'r adroddiad arbenigol gyda'r amserlen gostiedig sy'n ei ryddhau.</p></a>
       <a class="card" href="/cy/damp"><span class="tag">04 &middot; Gwaith</span><h3>Gwaith adfer lleithder</h3><p>Cwrs atal lleithder cemegol lle mae gwir angen, ailblastro sy'n gwrthsefyll halwynau, adfer plastr calch a rendr calch, atgyweiriadau allanol.</p></a>
-      <a class="card" href="/cy/timber"><span class="tag">05 &middot; Gwaith</span><h3>Rot &amp; woodworm treatment</h3><p>Diheintio gwaith maen, amnewid pren ac atgyweirio â resin, triniaeth bryfleiddiol wedi'i thargedu lle cadarnheir pla gweithredol mewn gwirionedd.</p></a>
-      <a class="card" href="/cy/landlords"><span class="tag">06 &middot; Cydymffurfio</span><h3>WHQS damp &amp; mould reports</h3><p>Adroddiadau ymchwilio wedi'u hysgrifennu i dystiolaethu amserlenni Safon Ansawdd Tai Cymru, gyda chrynodeb mewn iaith glir y gallwch ei anfon at y deiliad contract.</p></a>
+      <a class="card" href="/cy/timber"><span class="tag">05 &middot; Gwaith</span><h3>Trin pydredd a phryf pren</h3><p>Diheintio gwaith maen, amnewid pren ac atgyweirio â resin, triniaeth bryfleiddiol wedi'i thargedu lle cadarnheir pla gweithredol mewn gwirionedd.</p></a>
+      <a class="card" href="/cy/landlords"><span class="tag">06 &middot; Cydymffurfio</span><h3>Adroddiadau lleithder a llwydni SATC</h3><p>Adroddiadau ymchwilio wedi'u hysgrifennu i dystiolaethu amserlenni Safon Ansawdd Tai Cymru, gyda chrynodeb mewn iaith glir y gallwch ei anfon at y deiliad contract.</p></a>
     </div>
   </div>
 </div>
@@ -560,19 +564,19 @@ table.cmp td b{font-weight:700}
 <div class="band band--dark" id="whqs">
   <div class="wrap split">
     <div>
-      <p class="eyebrow">The law changed on 1 April 2026</p>
-      <h2 style="color:var(--stone)">Social landlords in Wales are now on the clock.</h2>
-      <p class="lede">The Welsh Housing Quality Standard was updated with effect from 1 April 2026 and now sets fixed timescales for hazards including damp and mould. It applies to councils and housing associations. Private landlords are not on a clock — but they are bound by a fitness duty that never switches off.</p>
+      <p class="eyebrow">Newidiodd y gyfraith ar 1 Ebrill 2026</p>
+      <h2 style="color:var(--stone)">Mae landlordiaid cymdeithasol yng Nghymru bellach ar y cloc.</h2>
+      <p class="lede">Diweddarwyd Safon Ansawdd Tai Cymru gydag effaith o 1 Ebrill 2026 ac mae bellach yn gosod amserlenni penodol ar gyfer peryglon gan gynnwys lleithder a llwydni. Mae'n berthnasol i gynghorau a chymdeithasau tai. Nid yw landlordiaid preifat ar gloc — ond maent wedi'u rhwymo gan ddyletswydd addasrwydd nad yw byth yn diffodd.</p>
       <div class="btnrow"><a class="btn btn--go" href="/cy/landlords">Darllenwch y dyletswyddau'n llawn</a></div>
     </div>
     <div>
-      <p class="eyebrow" style="margin-bottom:6px">WHQS damp &amp; mould timescales</p>
+      <p class="eyebrow" style="margin-bottom:6px">Amserlenni lleithder a llwydni SATC</p>
       <ol class="rule-steps">
-        <li><span class="n">24<small>ORIAU</small></span><div><h4>Significant risk, harm likely imminent</h4><p>Ymchwilio o fewn 24 awr, a chyflawni'r gwaith sydd ei angen i'w unioni o fewn 24 awr arall.</p></div></li>
-        <li><span class="n">10<small>DIWRNODAU GWAITH</small></span><div><h4>Significant risk, harm not imminent</h4><p>Ymchwilio o fewn 10 diwrnod gwaith, yna unioni o fewn 5 diwrnod gwaith arall.</p></div></li>
+        <li><span class="n">24<small>ORIAU</small></span><div><h4>Risg sylweddol, niwed yn debygol ar fin digwydd</h4><p>Ymchwilio o fewn 24 awr, a chyflawni'r gwaith sydd ei angen i'w unioni o fewn 24 awr arall.</p></div></li>
+        <li><span class="n">10<small>DIWRNODAU GWAITH</small></span><div><h4>Risg sylweddol, niwed ddim ar fin digwydd</h4><p>Ymchwilio o fewn 10 diwrnod gwaith, yna unioni o fewn 5 diwrnod gwaith arall.</p></div></li>
         <li><span class="n">5<small>DIWRNODAU GWAITH</small></span><div><h4>Os na ellir ei orffen mewn pryd</h4><p>Rhowch gynllun crynodeb ysgrifenedig i'r deiliad contract o fewn 5 diwrnod gwaith yn nodi beth fydd yn digwydd a phryd.</p></div></li>
       </ol>
-      <p class="small" style="color:rgba(230,227,233,.7);margin-top:18px">Social landlords must also publish their response times and report performance to the Welsh Government. General guidance only — see the landlords page.</p>
+      <p class="small" style="color:rgba(230,227,233,.7);margin-top:18px">Rhaid i landlordiaid cymdeithasol hefyd gyhoeddi eu hamseroedd ymateb ac adrodd am eu perfformiad i Lywodraeth Cymru. Canllawiau cyffredinol yn unig — gweler y dudalen landlordiaid.</p>
     </div>
   </div>
 </div>
@@ -580,12 +584,12 @@ table.cmp td b{font-weight:700}
 <div class="band">
   <div class="wrap split">
     <div>
-      <p class="eyebrow">Why we charge for the survey</p>
+      <p class="eyebrow">Pam rydym yn codi tâl am yr arolwg</p>
       <h2>Ymweliad gwerthu yw arolwg am ddim.</h2>
     </div>
     <div>
       <p>Os yw'r person sy'n diagnosio'ch wal yn cael ei dalu dim ond pan brynwch y driniaeth, dim ond un diagnosis y gall fforddio ei gyrraedd. Dyna sut y cafodd nifer fawr o derasau Cymreig gwrs atal lleithder wedi'i chwistrellu nad oedd ei angen arnynt erioed, mewn waliau lle mai rendr wedi cracio neu bibell ddŵr doredig oedd y gwir fai.</p>
-      <p>We charge a survey fee and we tell you what is wrong, including when the answer is "nothing that needs us". You are free to take the report to any contractor you like. If you want us to carry out the works, the survey fee comes off the price.</p>
+      <p>Rydym yn codi ffi arolwg ac yn dweud wrthych beth sydd o'i le, gan gynnwys pan yw'r ateb yn "ddim byd sydd angen ni". Rydych yn rhydd i fynd â'r adroddiad at unrhyw gontractwr a fynnoch. Os ydych am i ni gyflawni'r gwaith, daw'r ffi arolwg oddi ar y pris.</p>
       <p class="small">Caiff ffioedd eu dyfynnu a'u cadarnhau'n ysgrifenedig cyn i ni ymweld, ynghyd â'ch hawliau canslo lle cytunir ar y contract yn eich cartref.</p>
     </div>
   </div>
@@ -594,12 +598,12 @@ table.cmp td b{font-weight:700}
 <div class="band band--slate band--tight">
   <div class="wrap">
     <p class="eyebrow">Cwmpas</p>
-    <h2 style="color:var(--stone);max-width:22ch">The whole country, and we know what it's built from.</h2>
-    <p class="lede" style="max-width:64ch">Rubble stone terraces in the Valleys, brick and stone in Cardiff and Newport, rendered solid walls taking the weather on the Pembrokeshire coast, slate and stone cottages in Eryri where the rain is measured in metres. The building stock changes every thirty miles and so does the failure mode.</p>
+    <h2 style="color:var(--stone);max-width:22ch">Y wlad gyfan, ac rydym yn gwybod o beth mae wedi'i hadeiladu.</h2>
+    <p class="lede" style="max-width:64ch">Terasau carreg rwbel yn y Cymoedd, brics a charreg yng Nghaerdydd a Chasnewydd, waliau solet wedi'u rendro'n cymryd y tywydd ar arfordir Sir Benfro, bythynnod llechi a charreg yn Eryri lle mesurir y glaw mewn metrau. Mae'r stoc adeiladau'n newid bob deng milltir ar hugain ac felly hefyd y modd methu.</p>
     <ul class="chips" style="margin-top:26px">
-      <li>Caerdydd</li><li>Swansea</li><li>Casnewydd</li><li>Wrexham</li><li>Merthyr Tudful</li><li>Rhondda</li><li>Caerffili</li><li>Pen-y-bont ar Ogwr</li><li>Castell-nedd</li><li>Port Talbot</li><li>Llanelli</li><li>Caerfyrddin</li><li>Hwlffordd</li><li>Aberystwyth</li><li>Bangor</li><li>Caernarfon</li><li>Llandudno</li><li>Bae Colwyn</li><li>Y Rhyl</li><li>Yr Wyddgrug</li><li>Aberhonddu</li><li>Y Drenewydd</li>
+      <li>Caerdydd</li><li>Abertawe</li><li>Casnewydd</li><li>Wrecsam</li><li>Merthyr Tudful</li><li>Rhondda</li><li>Caerffili</li><li>Pen-y-bont ar Ogwr</li><li>Castell-nedd</li><li>Port Talbot</li><li>Llanelli</li><li>Caerfyrddin</li><li>Hwlffordd</li><li>Aberystwyth</li><li>Bangor</li><li>Caernarfon</li><li>Llandudno</li><li>Bae Colwyn</li><li>Y Rhyl</li><li>Yr Wyddgrug</li><li>Aberhonddu</li><li>Y Drenewydd</li>
     </ul>
-    <div class="btnrow"><a class="btn btn--ghost-d" href="/cy/areas">What we find where</a></div>
+    <div class="btnrow"><a class="btn btn--ghost-d" href="/cy/areas">Beth rydym yn ei ganfod ble</a></div>
   </div>
 </div>
 
@@ -611,12 +615,12 @@ table.cmp td b{font-weight:700}
     <div class="acc" id="faq">
       <button aria-expanded="false">A yw fy wal yn bendant yn lleithder sy'n codi?</button>
       <div class="panel"><p>Mae'n debyg nad ydyw, os yw'r staenio uwchlaw metr, yn ymddangos ar ôl glaw trwm, yn eistedd o dan ffenestr neu wrth ymyl simnai, neu os yw'r wal y tu allan wedi'i gorchuddio â rendr sment wedi cracio. Mae lleithder sy'n codi'n real ond yn anghyffredin, ac mae mesurydd dargludedd yn darllen halen, plasterfwrdd â chefn ffoil a latis metel mor frwd ag y mae'n darllen dŵr. Dyna pam rydym yn profi halwynau'r ddaear cyn i neb nodi cwrs wedi'i chwistrellu.</p></div>
-      <button aria-expanded="false">Should I take the render off?</button>
+      <button aria-expanded="false">A ddylwn i dynnu'r rendr i ffwrdd?</button>
       <div class="panel"><p>Yn aml ydy, ar wal solet cyn 1919 — ond nid ar fympwy ac nid i gyd ar unwaith. Mae rendr sment ar wal garreg yn dal lleithder, ac mae ei amnewid â rendr calch yn gadael i'r wal sychu eto. Mae'n aflonyddgar ac nid yw'n rhad, felly mae angen iddo fod yn gasgliad arolwg yn hytrach na'r cynnig agoriadol. Weithiau'r ateb yn syml yw trwsio'r craciau a thrwsio'r nwyddau dŵr glaw.</p></div>
       <button aria-expanded="false">Rwy'n ddeiliad contract ac ni fydd fy landlord yn gweithredu.</button>
       <div class="panel"><p>Report it in writing and keep the date. Under the Renting Homes (Wales) Act 2016 your landlord must keep the dwelling fit for human habitation throughout your occupation contract, and damp and mould growth is the first of the 29 matters the fitness regulations list. If you rent from a council or housing association, the WHQS timescales now apply as well. We also build <b>DampCheck Cymru</b>, a free tool that helps you identify what you are looking at and report it properly, in writing and dated.</p></div>
       <button aria-expanded="false">Pa mor hir mae arolwg yn ei gymryd a beth rydw i'n ei gael?</button>
-      <div class="panel"><p>Typically 60 to 120 minutes on site for a flat or standard house, longer for a full building. You receive a written photographic report, room by room, with the diagnosis and the evidence behind it, then a schedule of works split into urgent, remedial and general maintenance — costed, so you can price it against anyone else's quote and hand the maintenance items to a joiner or roofer.</p></div>
+      <div class="panel"><p>Fel arfer 60 i 120 munud ar y safle ar gyfer fflat neu dŷ safonol, hirach ar gyfer adeilad llawn. Rydych yn derbyn adroddiad ffotograffig ysgrifenedig, ystafell wrth ystafell, gyda'r diagnosis a'r dystiolaeth y tu ôl iddo, yna amserlen waith wedi'i rhannu'n frys, adferol a chynnal a chadw cyffredinol — wedi'i chostio, fel y gallwch ei phrisio yn erbyn dyfynbris unrhyw un arall a rhoi'r eitemau cynnal a chadw i saer coed neu döwr.</p></div>
     </div>
   </div>
 </div>
@@ -625,7 +629,7 @@ table.cmp td b{font-weight:700}
   <div class="wrap" style="text-align:center">
     <p class="eyebrow" style="justify-content:center">Cewch ddiagnosis</p>
     <h2 style="color:var(--stone);max-width:20ch;margin:0 auto .4em">Darganfyddwch beth sydd o'i le ar eich wal mewn gwirionedd.</h2>
-    <p class="lede" style="margin:0 auto 6px">Tell us what you're seeing. We'll tell you what it's likely to be, and what it will take to fix.</p>
+    <p class="lede" style="margin:0 auto 6px">Dywedwch wrthym beth rydych yn ei weld. Byddwn yn dweud wrthych beth y mae'n debygol o fod, a beth fydd ei angen i'w drwsio.</p>
     <div class="btnrow" style="justify-content:center"><a class="btn btn--go" href="/cy/request">Gofyn am arolwg</a></div>
   </div>
 </div>

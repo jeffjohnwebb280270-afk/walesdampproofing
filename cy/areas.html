@@ -153,6 +153,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -175,6 +178,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -416,25 +420,25 @@ table.cmp td b{font-weight:700}
 <section class="hero short">
   <div class="wrap">
     <p class="eyebrow">Lle rydym yn gweithio</p>
-    <h1>What we find, where.</h1>
-    <p class="lede">Welsh building stock is regional, and so is the way it fails. Thirty miles changes the wall, the weather and the diagnosis.</p>
+    <h1>Beth rydym yn ei ganfod, a ble.</h1>
+    <p class="lede">Mae stoc adeiladau Cymru'n rhanbarthol, ac felly hefyd y ffordd y mae'n methu. Mae deng milltir ar hugain yn newid y wal, y tywydd a'r diagnosis.</p>
   </div>
 </section>
 
 <div class="band">
   <div class="wrap">
     <div class="cols cols-2">
-      <div class="card"><span class="tag">The South Wales Valleys</span><h3>Terraced stone, cement render, steep ground</h3><p>Rhondda, Cynon, Taf, Merthyr, Caerphilly, Blaenau Gwent. Ex-colliery terraces of rubble stone bedded in lime, almost universally re-rendered in cement, built into hillsides where ground water moves across the site rather than down it. Raised external ground at the rear and cracked render at the front is the recurring pair.</p></div>
-      <div class="card"><span class="tag">Caerdydd, Casnewydd ac Abertawe</span><h3>Victorian and Edwardian terraces with cellars</h3><p>Terasau brics a charreg gyda ffenestri bae, lloriau crog a seleri. Mae toeau bae a'u cyffyrdd gwastad yn gollwng, mae awyrellau seler yn cael eu rhwystro neu eu hadeiladu drostynt, ac mae seler gyda dŵr yn sefyll o dan bibell ddŵr sy'n gollwng yn agos at yr amodau delfrydol ar gyfer pydredd sych.</p></div>
+      <div class="card"><span class="tag">Cymoedd De Cymru</span><h3>Carreg teras, rendr sment, tir serth</h3><p>Rhondda, Cynon, Taf, Merthyr, Caerffili, Blaenau Gwent. Terasau hen lofeydd o garreg rwbel wedi'u gosod mewn calch, bron pob un wedi'u hail-rendro mewn sment, wedi'u hadeiladu i mewn i lethrau bryniau lle mae dŵr daear yn symud ar draws y safle yn hytrach nag i lawr. Tir allanol uchel yn y cefn a rendr wedi cracio yn y ffrynt yw'r pâr cyson.</p></div>
+      <div class="card"><span class="tag">Caerdydd, Casnewydd ac Abertawe</span><h3>Terasau Fictoraidd ac Edwardaidd â seleri</h3><p>Terasau brics a charreg gyda ffenestri bae, lloriau crog a seleri. Mae toeau bae a'u cyffyrdd gwastad yn gollwng, mae awyrellau seler yn cael eu rhwystro neu eu hadeiladu drostynt, ac mae seler gyda dŵr yn sefyll o dan bibell ddŵr sy'n gollwng yn agos at yr amodau delfrydol ar gyfer pydredd sych.</p></div>
       <div class="card"><span class="tag">Sir Benfro, Gŵyr a'r arfordir gorllewinol</span><h3>Waliau solet wedi'u rendro, amlygiad llawn</h3><p>Glaw a yrrir o'r Iwerydd ar ddrychiadau heb ddim o'u blaenau am dair mil o filltiroedd. Mae craciau rendr a methiannau cyffyrdd yn cyfrif llawer mwy yma nag unrhyw le mewndirol, a'r drychiadau gorllewinol a de-orllewinol sy'n dioddef bron y cyfan.</p></div>
-      <div class="card"><span class="tag">Eryri, Gwynedd a Chonwy</span><h3>Slate, stone and the wettest ground in Britain</h3><p>Mae rhannau o Eryri'n cael ymhlith y glawiad uchaf yn unrhyw le yn y Deyrnas Unedig. Waliau carreg solet wedi'u llechu a'u rendro, yn aml gyda lloriau llechi wedi'u gosod yn uniongyrchol ar y ddaear. Mae llwybrau awyru a gallu wal i sychu'n cyfrif mwy nag y bydd unrhyw driniaeth gemegol byth.</p></div>
-      <div class="card"><span class="tag">Powys, Ceredigion a chanolbarth Cymru</span><h3>Rural stone cottages</h3><p>Thick rubble walls that hold water for weeks after a wet spell, earth or slab solums with minimal cross-ventilation, and modern impermeable renders and floor slabs added in good faith that sealed the building shut. Sub-floor timber decay is the common find.</p></div>
-      <div class="card"><span class="tag">Wrexham, Flintshire &amp; Denbighshire</span><h3>Stoc gymysg, brics a cheudod</h3><p>Sandstone and brick terraces alongside interwar and post-war cavity housing, where the failure is usually a bridged cavity, mortar droppings on wall ties, or an extension or conservatory that raised ground levels above the damp-proof course.</p></div>
+      <div class="card"><span class="tag">Eryri, Gwynedd a Chonwy</span><h3>Llechi, carreg a'r tir gwlypaf ym Mhrydain</h3><p>Mae rhannau o Eryri'n cael ymhlith y glawiad uchaf yn unrhyw le yn y Deyrnas Unedig. Waliau carreg solet wedi'u llechu a'u rendro, yn aml gyda lloriau llechi wedi'u gosod yn uniongyrchol ar y ddaear. Mae llwybrau awyru a gallu wal i sychu'n cyfrif mwy nag y bydd unrhyw driniaeth gemegol byth.</p></div>
+      <div class="card"><span class="tag">Powys, Ceredigion a chanolbarth Cymru</span><h3>Bythynnod carreg gwledig</h3><p>Waliau rwbel trwchus sy'n dal dŵr am wythnosau ar ôl cyfnod gwlyb, gwaelodion pridd neu lechen o dan y llawr heb fawr o groes-awyru, a rendrau anathraidd modern a slabiau llawr a ychwanegwyd yn ddidwyll ac a seliodd yr adeilad ar gau. Pydredd pren o dan y llawr yw'r canfyddiad cyffredin.</p></div>
+      <div class="card"><span class="tag">Wrecsam, Sir y Fflint a Sir Ddinbych</span><h3>Stoc gymysg, brics a cheudod</h3><p>Terasau tywodfaen a brics ochr yn ochr â thai ceudod rhyng-ryfel ac ôl-ryfel, lle mae'r methiant fel arfer yn geudod wedi'i bontio, diferion morter ar glymau wal, neu estyniad neu ystafell wydr a gododd lefelau tir uwchlaw'r cwrs atal lleithder.</p></div>
     </div>
 
-    <p class="eyebrow" style="margin-top:44px">Towns and cities we cover</p>
+    <p class="eyebrow" style="margin-top:44px">Trefi a dinasoedd rydym yn eu cwmpasu</p>
     <ul class="chips">
-      <li>Caerdydd</li><li>Swansea</li><li>Casnewydd</li><li>Wrexham</li><li>Y Barri</li><li>Caerffili</li><li>Pen-y-bont ar Ogwr</li><li>Castell-nedd</li><li>Port Talbot</li><li>Merthyr Tudful</li><li>Rhondda</li><li>Pontypridd</li><li>Cwmbrân</li><li>Glynebwy</li><li>Llanelli</li><li>Caerfyrddin</li><li>Hwlffordd</li><li>Penfro</li><li>Aberystwyth</li><li>Aberteifi</li><li>Aberhonddu</li><li>Y Drenewydd</li><li>Welshpool</li><li><a href="/cy/bangor">Bangor</a></li><li><a href="/cy/caernarfon">Caernarfon</a></li><li>Porthmadog</li><li><a href="/cy/llandudno">Llandudno</a></li><li><a href="/cy/colwyn-bay">Bae Colwyn</a></li><li><a href="/cy/rhyl">Y Rhyl</a></li><li>Yr Wyddgrug</li><li>Y Fflint</li><li><a href="/cy/holyhead">Caergybi</a></li>
+      <li>Caerdydd</li><li>Abertawe</li><li>Casnewydd</li><li>Wrecsam</li><li>Y Barri</li><li>Caerffili</li><li>Pen-y-bont ar Ogwr</li><li>Castell-nedd</li><li>Port Talbot</li><li>Merthyr Tudful</li><li>Rhondda</li><li>Pontypridd</li><li>Cwmbrân</li><li>Glynebwy</li><li>Llanelli</li><li>Caerfyrddin</li><li>Hwlffordd</li><li>Penfro</li><li>Aberystwyth</li><li>Aberteifi</li><li>Aberhonddu</li><li>Y Drenewydd</li><li>Y Trallwng</li><li><a href="/cy/bangor">Bangor</a></li><li><a href="/cy/caernarfon">Caernarfon</a></li><li>Porthmadog</li><li><a href="/cy/llandudno">Llandudno</a></li><li><a href="/cy/colwyn-bay">Bae Colwyn</a></li><li><a href="/cy/rhyl">Y Rhyl</a></li><li>Yr Wyddgrug</li><li>Y Fflint</li><li><a href="/cy/holyhead">Caergybi</a></li>
     </ul>
     
     <p class="eyebrow" style="margin-top:44px">Gogledd Cymru &mdash; tudalennau i bob tref</p>
@@ -448,8 +452,8 @@ table.cmp td b{font-weight:700}
 <div class="band band--dark band--tight">
   <div class="wrap" style="text-align:center">
     <p class="eyebrow" style="justify-content:center">Unrhyw le yng Nghymru</p>
-    <h2 style="color:var(--stone);max-width:20ch;margin:0 auto .4em">Tell us the postcode.</h2>
-    <p class="lede" style="margin:0 auto 6px">We travel across Wales and plan west coast and island work in batches — ask about scheduling.</p>
+    <h2 style="color:var(--stone);max-width:20ch;margin:0 auto .4em">Dywedwch wrthym y cod post.</h2>
+    <p class="lede" style="margin:0 auto 6px">Rydym yn teithio ar draws Cymru ac yn cynllunio gwaith yr arfordir gorllewinol a'r ynysoedd mewn sypiau — gofynnwch am amserlennu.</p>
     <div class="btnrow" style="justify-content:center"><a class="btn btn--go" href="/cy/request">Gofyn am arolwg</a></div>
   </div>
 </div>

@@ -102,6 +102,43 @@ def audit(name, html):
     return out
 
 
+PRIORITY = {'index.html': '1.0', 'about.html': '0.6'}
+
+
+def sitemap():
+    """Rewrite sitemap.xml with both languages and their hreflang pairing.
+
+    Generating it here rather than by hand is the only way eighteen pages in
+    two languages stay in step with what actually exists on disk.
+    """
+    import datetime
+    today = datetime.date.today().isoformat()
+    rows = []
+    for name in L.pages():
+        en, cy = SITE + path_for(name), SITE + '/cy' + path_for(name)
+        if name == 'index.html':
+            cy = SITE + '/cy/'
+        pri = PRIORITY.get(name, '0.8')
+        for loc, other, lang, olang in ((en, cy, 'en-GB', 'cy'),
+                                        (cy, en, 'cy', 'en-GB')):
+            rows.append(
+                f'  <url>\n'
+                f'    <loc>{loc}</loc>\n'
+                f'    <lastmod>{today}</lastmod>\n'
+                f'    <changefreq>monthly</changefreq>\n'
+                f'    <priority>{pri}</priority>\n'
+                f'    <xhtml:link rel="alternate" hreflang="{lang}" href="{loc}"/>\n'
+                f'    <xhtml:link rel="alternate" hreflang="{olang}" href="{other}"/>\n'
+                f'    <xhtml:link rel="alternate" hreflang="x-default" href="{en}"/>\n'
+                f'  </url>')
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+           '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+           + '\n'.join(rows) + '\n</urlset>\n')
+    open(os.path.join(L.ROOT, 'sitemap.xml'), 'w', encoding='utf-8').write(xml)
+    return len(rows)
+
+
 def build():
     table = L.load('cy.json')
     missing, long_meta = set(), []
@@ -110,7 +147,12 @@ def build():
         src = open(os.path.join(L.ROOT, name), encoding='utf-8').read()
 
         # English side: pair it with the Welsh page and offer the switch.
-        en = inject_head(src, alternates(name))
+        en = src
+        if 'og:locale' not in en:
+            en = en.replace('<meta property="og:type"',
+                            '<meta property="og:locale" content="en_GB">\n'
+                            '<meta property="og:type"', 1)
+        en = inject_head(en, alternates(name))
         cy_href = '/cy' + path_for(name)
         en = switcher(en, '/cy/' if cy_href == '/cy/' else cy_href, 'Cymraeg', 'cy')
         if en != src:
@@ -122,13 +164,15 @@ def build():
         out = translate(bare, table, missing)
         out = relink(out)
         out = out.replace('<html lang="en-GB">', '<html lang="cy">', 1)
-        out = out.replace('<meta property="og:locale" content="en_GB">', '', 1)
+        out = re.sub(r'<meta property="og:locale" content="en_GB">\n?', '', out, count=1)
         out = out.replace('</head>', '<meta property="og:locale" content="cy">\n</head>', 1)
         out = inject_head(out, alternates(name))
         out = switcher(out, path_for(name), 'English', 'en-GB')
         open(os.path.join(OUT, name), 'w', encoding='utf-8').write(out)
         long_meta.extend(audit(name, out))
 
+    n = sitemap()
+    print(f'sitemap: {n} urls', file=sys.stderr)
     done = sum(1 for _ in table)
     print(f'built {len(L.pages())} Welsh pages, {done} strings translated, '
           f'{len(missing)} still English', file=sys.stderr)

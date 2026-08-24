@@ -168,6 +168,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -190,6 +193,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -431,10 +435,10 @@ table.cmp td b{font-weight:700}
 <section class="hero short">
   <div class="wrap">
     <p class="eyebrow">Llandudno, Conwy</p>
-    <h1>Victorian seafront stock,<br>surveyed properly.</h1>
+    <h1>Stoc glan môr Fictoraidd,<br>wedi'i harolygu'n iawn.</h1>
     <p class="lede">Adeiladwyd Llandudno'n gyflym ac yn hyderus yn ail hanner y bedwaredd ganrif ar bymtheg, ac mae llawer ohoni'n dal i sefyll yn ei ffurf wreiddiol: terasau tal wedi'u rendro, gwestai a thai gwesty ar y promenâd, a filâu'n rhedeg yn ôl tuag at y Gogarth.</p>
     <div class="btnrow">
-      <a class="btn btn--go" href="/cy/request">Request a survey in Llandudno</a>
+      <a class="btn btn--go" href="/cy/request">Gofyn am arolwg yn Llandudno</a>
       <a class="btn" href="tel:+447446522034">07446 522034</a>
     </div>
   </div>
@@ -443,11 +447,11 @@ table.cmp td b{font-weight:700}
 <div class="band">
   <div class="wrap">
     <p class="eyebrow">Y stoc leol</p>
-    <h2>What Llandudno is built from.</h2>
+    <h2>O beth mae Llandudno wedi'i adeiladu.</h2>
     <div class="cols cols-2">
-      <div class="card"><span class="tag">The promenade</span><h3>Tall rendered terraces, full exposure</h3><p>Pedwar a phum llawr yn wynebu môr agored. Mae rendr ar yr uchder hwnnw'n cymryd glaw a yrrir gan y gwynt a symudiad thermol, yn cracio wrth y cyffyrdd ac yn gadael dŵr i mewn i waliau solet. Y drychiadau talaf yw'r rhai anoddaf i'w harolygu a'r rhai mwyaf tebygol o fod yn achos.</p></div>
+      <div class="card"><span class="tag">Y promenâd</span><h3>Terasau tal wedi'u rendro, amlygiad llawn</h3><p>Pedwar a phum llawr yn wynebu môr agored. Mae rendr ar yr uchder hwnnw'n cymryd glaw a yrrir gan y gwynt a symudiad thermol, yn cracio wrth y cyffyrdd ac yn gadael dŵr i mewn i waliau solet. Y drychiadau talaf yw'r rhai anoddaf i'w harolygu a'r rhai mwyaf tebygol o fod yn achos.</p></div>
       <div class="card"><span class="tag">Gwestai a thai gwesty</span><h3>Adeiladau mawr, toeau cymhleth</h3><p>Toeau a chwteri hir, parapetau, cwteri dyffryn a chyffyrdd gwastad rhwng cyfnodau estyniad. Gall un allfa wedi'i rhwystro y tu ôl i barapet wlychu wal am dymor cyfan heb ddim yn weladwy o'r llawr.</p></div>
-      <div class="card"><span class="tag">Villas towards the Orme</span><h3>Seleri a safleoedd ar oledd</h3><p>Substantial houses with cellars, built into rising ground. Raised rear ground levels and blocked cellar ventilation produce the classic tide mark that gets injected and then returns.</p></div>
+      <div class="card"><span class="tag">Filâu tuag at y Gogarth</span><h3>Seleri a safleoedd ar oledd</h3><p>Tai sylweddol â seleri, wedi'u hadeiladu i mewn i dir sy'n codi. Mae lefelau tir cefn uchel ac awyru seler wedi'i rwystro'n cynhyrchu'r ôl llanw clasurol sy'n cael ei chwistrellu ac yna'n dychwelyd.</p></div>
       <div class="card"><span class="tag">Cyn prynu</span><h3>'Cael adroddiad arbenigol'</h3><p>Mae llawer o'n gwaith yn Llandudno yn dilyn arolwg prynwr tŷ a nododd ddarlleniadau mesurydd uchel ac a stopiodd yno. Mae adroddiad annibynnol yn dweud wrthych beth ydyw mewn gwirionedd a beth yw cost yr atgyweiriad — tra gallwch ei ddefnyddio o hyd.</p></div>
     </div>
   </div>
@@ -457,8 +461,8 @@ table.cmp td b{font-weight:700}
   <div class="wrap">
     <p class="eyebrow">Gwerth ei wybod</p>
     <h2>Mae annibynnol yn golygu dim dyfynbris ar y diwedd.</h2>
-    <p class="lede">There is an obvious conflict in asking a company that sells damp-proofing whether you need damp-proofing. In a town with this much Victorian stock and this much property changing hands, that conflict costs buyers real money.</p>
-    <p class="lede">We survey and report. There is no treatment arm, no commission and no quote waiting at the end — so if the answer is a fifteen-pound gutter bracket, that is what the report says.</p>
+    <p class="lede">Mae gwrthdaro amlwg mewn gofyn i gwmni sy'n gwerthu atal lleithder a oes angen atal lleithder arnoch. Mewn tref â chymaint o stoc Fictoraidd a chymaint o eiddo'n newid dwylo, mae'r gwrthdaro hwnnw'n costio arian go iawn i brynwyr.</p>
+    <p class="lede">Rydym yn arolygu ac yn adrodd. Nid oes cangen driniaeth, dim comisiwn a dim dyfynbris yn aros ar y diwedd — felly os mai braced cwter pymtheg punt yw'r ateb, dyna beth y mae'r adroddiad yn ei ddweud.</p>
   </div>
 </div>
 

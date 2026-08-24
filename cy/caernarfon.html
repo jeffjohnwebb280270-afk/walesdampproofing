@@ -168,6 +168,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -190,6 +193,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -431,7 +435,7 @@ table.cmp td b{font-weight:700}
 <section class="hero short">
   <div class="wrap">
     <p class="eyebrow">Caernarfon, Gwynedd</p>
-    <h1>Stone that was built<br>to breathe, and then sealed.</h1>
+    <h1>Carreg a adeiladwyd<br>i anadlu, ac yna ei selio.</h1>
     <p class="lede">Carreg a llechi yw stoc hŷn Caernarfon, wedi'u codi ymhell cyn i neb feddwl am rwystrau anathraidd. Ers hynny mae bron y cyfan wedi'i rendro, ei baentio neu ei lorio mewn rhywbeth sy'n ei atal rhag sychu — ac mae'r un penderfyniad hwnnw'n achosi mwy o leithder yma na'r tywydd.</p>
     <div class="btnrow">
       <a class="btn btn--go" href="/cy/request">Gofyn am arolwg yng Nghaernarfon</a>
@@ -443,10 +447,10 @@ table.cmp td b{font-weight:700}
 <div class="band">
   <div class="wrap">
     <p class="eyebrow">Y stoc leol</p>
-    <h2>What Caernarfon is built from.</h2>
+    <h2>O beth mae Caernarfon wedi'i adeiladu.</h2>
     <div class="cols cols-2">
-      <div class="card"><span class="tag">Y tu mewn i'r waliau</span><h3>Carreg hanesyddol, strydoedd cul</h3><p>Solid stone with lime mortar, shared party walls and very little space between buildings. Rain reaches the wall but sun and wind often do not, so drying is slow and any impermeable coating turns a damp wall into a permanently wet one.</p></div>
-      <div class="card"><span class="tag">Twthill &amp; the terraces</span><h3>Slate-hung and rendered stone</h3><p>Slate-hung weather elevations over stone, frequently over-rendered in cement. The slate is doing its job; the render behind it traps what gets past. Failures show at the junctions rather than in the middle of a wall.</p></div>
+      <div class="card"><span class="tag">Y tu mewn i'r waliau</span><h3>Carreg hanesyddol, strydoedd cul</h3><p>Carreg solet gyda morter calch, waliau cefn a rennir a phrin ddim lle rhwng adeiladau. Mae glaw'n cyrraedd y wal ond yn aml nid yw'r haul a'r gwynt, felly mae sychu'n araf ac mae unrhyw haen anathraidd yn troi wal laith yn un sy'n wlyb yn barhaol.</p></div>
+      <div class="card"><span class="tag">Twtil a'r terasau</span><h3>Carreg wedi'i llechu a'i rendro</h3><p>Drychiadau tywydd wedi'u llechu dros garreg, yn aml wedi'u gor-rendro mewn sment. Mae'r llechi'n gwneud eu gwaith; mae'r rendr y tu ôl iddynt yn dal yr hyn sy'n mynd heibio. Mae methiannau'n dangos wrth y cyffyrdd yn hytrach nag yng nghanol wal.</p></div>
       <div class="card"><span class="tag">Llety gwyliau</span><h3>Gwag, heb ei gynhesu, heb ei awyru</h3><p>Mae eiddo sydd wedi'i gau o fis Hydref i fis Mawrth gyda'r gwres i ffwrdd yn tyfu llwydni p'un a oes ganddo broblem ddŵr ai peidio. Dyma'r alwad fwyaf cyffredin a gawn yng Nghaernarfon yn y gwanwyn, a rheolaeth yn hytrach na thriniaeth yw'r ateb.</p></div>
       <div class="card"><span class="tag">Lloriau modern mewn hen dai</span><h3>Concrit dros dir pridd o dan y llawr</h3><p>Mae slab concrit a osodwyd dros yr hyn a arferai fod yn llawr pridd neu lechen yn gwthio lleithder tuag at waelod y waliau. Caiff yr ôl llanw sy'n dilyn ei ddiagnosio fel lleithder sy'n codi a'i chwistrellu, ac mae'n dod yn ôl yn syth.</p></div>
     </div>
@@ -458,7 +462,7 @@ table.cmp td b{font-weight:700}
     <p class="eyebrow">Gwerth ei wybod</p>
     <h2>Yn Gymraeg, os yw'n well gennych.</h2>
     <p class="lede">Mae gan Gaernarfon ymhlith y cyfrannau uchaf o siaradwyr Cymraeg yn unrhyw le yng Nghymru, ac mae arolwg yn haws i'w ddilyn yn yr iaith rydych yn meddwl ynddi. Rydym yn hapus i gynnal yr ymweliad a'i drafod yn Gymraeg.</p>
-    <p class="lede">The written report is produced in English as standard — say the word if you would prefer it the other way round and we will sort it.</p>
+    <p class="lede">Cynhyrchir yr adroddiad ysgrifenedig yn Saesneg fel safon — dywedwch y gair os byddai'n well gennych ef yn Gymraeg a byddwn yn ei drefnu.</p>
   </div>
 </div>
 

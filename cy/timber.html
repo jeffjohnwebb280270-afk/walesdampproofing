@@ -153,6 +153,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -175,6 +178,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -416,7 +420,7 @@ table.cmp td b{font-weight:700}
 <section class="hero short">
   <div class="wrap">
     <p class="eyebrow">Pydredd pren</p>
-    <h1>Rot doesn't stop<br>where you can see it.</h1>
+    <h1>Nid yw pydredd yn stopio<br>lle gallwch ei weld.</h1>
     <p class="lede">Pydredd sych yw'r un sy'n costio fwyaf pan gaiff ei ganfod yn hwyr. Mae pydredd gwlyb yn llawer mwy cyffredin ac yn llawer haws ei reoli. Mae pryf pren fel arfer yn hanesyddol ac fel arfer yn cael ei or-drin.</p>
   </div>
 </section>
@@ -424,12 +428,12 @@ table.cmp td b{font-weight:700}
 <div class="band">
   <div class="wrap">
     <div class="cols cols-3">
-      <div class="diag"><p class="sig">Serpula lacrymans</p><h3>Pydredd sych</h3><p>Rust-red spore dust, cuboidal cracking across the grain, grey-white mycelium and a mushroom smell. It travels through and behind masonry, so the visible damage is rarely the full extent — which is why the survey matters more than the treatment quote. It needs a persistent water source, so there is always a live defect behind it. We establish the extent, treat only where it is justified, and specify the building repair that removes the moisture.</p></div>
-      <div class="diag"><p class="sig">Coniophora ac eraill</p><h3>Wet rot</h3><p>Pren tywyll, meddal, edafog wedi'i gyfyngu i'r ardal wlyb. Pennau trawstiau wedi'u hadeiladu i mewn i dalcen llaith, siliau ffenestri, platiau o dan y llawr, gwaelod ffrâm drws. Wedi'i gyfyngu, yn rhagweladwy, ac yn cael ei ddatrys trwy atal y dŵr ac amnewid neu atgyweirio'r pren yr effeithiwyd arno â resin.</p></div>
+      <div class="diag"><p class="sig">Serpula lacrymans</p><h3>Pydredd sych</h3><p>Llwch sborau rhwd-goch, cracio ciwbaidd ar draws y graen, myseliwm llwyd-wyn ac arogl madarch. Mae'n teithio trwy a thu ôl i waith maen, felly anaml y mae'r difrod gweladwy'n gyfan — a dyna pam mae'r arolwg yn cyfrif mwy na'r dyfynbris triniaeth. Mae angen ffynhonnell ddŵr barhaus arno, felly mae diffyg byw y tu ôl iddo bob amser. Rydym yn sefydlu'r maint, yn trin dim ond lle mae cyfiawnhad, ac yn nodi'r atgyweiriad adeiladu sy'n cael gwared ar y lleithder.</p></div>
+      <div class="diag"><p class="sig">Coniophora ac eraill</p><h3>Pydredd gwlyb</h3><p>Pren tywyll, meddal, edafog wedi'i gyfyngu i'r ardal wlyb. Pennau trawstiau wedi'u hadeiladu i mewn i dalcen llaith, siliau ffenestri, platiau o dan y llawr, gwaelod ffrâm drws. Wedi'i gyfyngu, yn rhagweladwy, ac yn cael ei ddatrys trwy atal y dŵr ac amnewid neu atgyweirio'r pren yr effeithiwyd arno â resin.</p></div>
       <div class="diag"><p class="sig">Anobium punctatum</p><h3>Pryf pren</h3><p>Chwilen ddodrefn gyffredin mewn pren meddal llaith o dan y llawr. Nid "a oes tyllau" yw'r cwestiwn byth — ond a yw'r pla'n weithredol, ac rydym yn asesu hynny trwy'r llwch tyllu, cyflwr y tyllau a chynnwys lleithder y pren. Nid oes angen unrhyw driniaeth gemegol o gwbl ar bla hanesyddol mewn pren sych.</p></div>
     </div>
 
-    <div class="stamp">STRUCTURAL NOTE — where decay has reached joists, lintels or bearings we will tell you plainly that a structural engineer is required. We do not carry out structural design and we will not quote around it.</div>
+    <div class="stamp">NODYN STRWYTHUROL — lle mae pydredd wedi cyrraedd trawstiau, capanau neu gynhalion byddwn yn dweud wrthych yn glir bod angen peiriannydd strwythurol. Nid ydym yn cyflawni dylunio strwythurol ac ni fyddwn yn dyfynnu o'i amgylch.</div>
     <div class="btnrow"><a class="btn btn--go" href="/cy/request">Archebwch arolygiad pren</a></div>
   </div>
 </div>
@@ -437,11 +441,11 @@ table.cmp td b{font-weight:700}
 <div class="band band--slate">
   <div class="wrap split">
     <div>
-      <p class="eyebrow">Where we find it in Wales</p>
+      <p class="eyebrow">Lle rydym yn dod o hyd iddo yng Nghymru</p>
       <h2 style="color:var(--stone)">Seleri, tir o dan y llawr a phennau trawstiau adeiledig.</h2>
     </div>
     <div>
-      <p style="color:rgba(230,227,233,.86)">Victorian and Edwardian terraces in Cardiff, Newport and Swansea frequently have cellars, and a cellar with a blocked vent and a leaking downpipe above it is close to ideal conditions for dry rot. Valleys terraces built into a hillside have earth or slab solums with minimal cross-ventilation and ground water moving through them.</p>
+      <p style="color:rgba(230,227,233,.86)">Mae gan derasau Fictoraidd ac Edwardaidd yng Nghaerdydd, Casnewydd ac Abertawe seleri'n aml, ac mae seler ag awyrell wedi'i rhwystro a phibell ddŵr yn gollwng uwch ei phen yn agos at yr amodau delfrydol ar gyfer pydredd sych. Mae gan derasau'r Cymoedd a adeiladwyd i mewn i lethr bryn waelodion pridd neu lechen heb fawr o groes-awyru a dŵr daear yn symud trwyddynt.</p>
       <p style="color:rgba(230,227,233,.86)">Ar draws y cyfan, y canfyddiad cyson yw pen trawst yn eistedd yn uniongyrchol mewn wal solet wlyb. Nid yw'r pren yn gwneud dim o'i le; mae'r wal yn wlyb am fod y rendr y tu allan iddi wedi methu. Amnewidiwch y trawst heb drwsio'r rendr ac rydych wedi prynu tua blwyddyn.</p>
     </div>
   </div>
@@ -450,8 +454,8 @@ table.cmp td b{font-weight:700}
 <div class="band band--dark band--tight">
   <div class="wrap" style="text-align:center">
     <p class="eyebrow" style="justify-content:center">Canfod y maint</p>
-    <h2 style="color:var(--stone);max-width:20ch;margin:0 auto .4em">Rot is a moisture problem wearing a fungus costume.</h2>
-    <p class="lede" style="margin:0 auto 6px">We find the water first, then the timber. Treating one without the other is money on fire.</p>
+    <h2 style="color:var(--stone);max-width:20ch;margin:0 auto .4em">Problem lleithder mewn gwisg ffwng yw pydredd.</h2>
+    <p class="lede" style="margin:0 auto 6px">Rydym yn dod o hyd i'r dŵr yn gyntaf, yna'r pren. Mae trin un heb y llall yn arian ar dân.</p>
     <div class="btnrow" style="justify-content:center"><a class="btn btn--go" href="/cy/request">Gofyn am arolwg</a></div>
   </div>
 </div>

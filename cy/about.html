@@ -153,6 +153,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -175,6 +178,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -423,15 +427,15 @@ table.cmp td b{font-weight:700}
 <div class="band">
   <div class="wrap split">
     <div>
-      <p>[Company background — who you are, how long in the trade, what you did before. Two or three short paragraphs, first person plural, no marketing language. Mention the qualifications by name and the year you got them.]</p>
-      <p>[Why you set the business up as independent survey first. This is the differentiator on the whole site — say it in your own words here.]</p>
-      <p>[Welsh language position — whether you offer correspondence or reports in Welsh, and who to ask for. Delete this paragraph if not applicable.]</p>
+      <p>[Cefndir y cwmni — pwy ydych chi, pa mor hir yn y fasnach, beth wnaethoch chi o'r blaen. Dau neu dri pharagraff byr, person cyntaf lluosog, dim iaith farchnata. Enwch y cymwysterau a'r flwyddyn y cawsoch hwy.]</p>
+      <p>[Pam y sefydloch y busnes fel arolwg annibynnol yn gyntaf. Dyma'r gwahaniaethydd ar y wefan gyfan — dywedwch hynny yn eich geiriau eich hun yma.]</p>
+      <p>[Safbwynt yr iaith Gymraeg — a ydych yn cynnig gohebiaeth neu adroddiadau yn Gymraeg, a phwy i ofyn amdano. Dilëwch y paragraff hwn os nad yw'n berthnasol.]</p>
     </div>
     <div>
       <div class="cols cols-2">
-        <div class="card"><span class="tag">Who runs it</span><h3>PCAQT &mdash; Lleithder a Phren</h3><p>The business is run by Jeff Webb, PCA Qualified Technician in Damp and Timber, certificate no.&nbsp;957, awarded 1 May 2024 by the Property Care Association.</p></div>
-        <div class="card"><span class="tag">Who surveys</span><h3>Arolygwyr ardystiedig gan y PCA</h3><p>Surveys and reports are carried out by our own PCA-certificated surveyors. Not subcontracted, and not a franchise. The surveyor's name and certificate number appear on every report we issue.</p></div>
-        <div class="card"><span class="tag">Cwmpas</span><h3>Yswiriant</h3><p>[Public liability and professional indemnity limits.] Certificates available on request.</p></div>
+        <div class="card"><span class="tag">Pwy sy'n ei redeg</span><h3>PCAQT &mdash; Lleithder a Phren</h3><p>Mae'r busnes yn cael ei redeg gan Jeff Webb, Technegydd Cymwysedig PCA mewn Lleithder a Phren, tystysgrif rhif&nbsp;957, a ddyfarnwyd ar 1 Mai 2024 gan y Property Care Association.</p></div>
+        <div class="card"><span class="tag">Pwy sy'n arolygu</span><h3>Arolygwyr ardystiedig gan y PCA</h3><p>Cyflawnir arolygon ac adroddiadau gan ein harolygwyr ardystiedig gan y PCA ein hunain. Nid yw'n isgontract, ac nid yw'n fasnachfraint. Mae enw a rhif tystysgrif yr arolygydd yn ymddangos ar bob adroddiad a gyhoeddwn.</p></div>
+        <div class="card"><span class="tag">Cwmpas</span><h3>Yswiriant</h3><p>[Terfynau atebolrwydd cyhoeddus ac indemniad proffesiynol.] Tystysgrifau ar gael ar gais.</p></div>
         <div class="card"><span class="tag">Cwmpas</span><h3>Gwarantau</h3><p>Gwarantau hirdymor ar waith adfer, gyda chefnogaeth yswiriant annibynnol ar gael fel bod y warant yn goroesi'r cwmni.</p></div>
       </div>
     </div>
@@ -440,15 +444,11 @@ table.cmp td b{font-weight:700}
 
 <div class="band band--slate band--tight">
   <div class="wrap split">
-    <div><p class="eyebrow">Cysylltu</p><h2 style="color:var(--stone)">Talk to a surveyor.</h2>
+    <div><p class="eyebrow">Cysylltu</p><h2 style="color:var(--stone)">Siaradwch ag arolygydd.</h2>
       <p class="lede">Nid canolfan alwadau ac nid gwerthwr. Os yw'n gwestiwn pum munud, gofynnwch.</p>
     </div>
     <div>
-      <p style="font-family:var(--f-mono);font-size:15px;line-height:2.1;color:var(--stone)">
-        TEL &nbsp;<a href="tel:+447446522034" style="color:var(--rose);text-decoration:none">07446 522034</a><br>
-        EMAIL &nbsp;<a href="mailto:contact@walesdampproofing.co.uk" style="color:var(--rose);text-decoration:none">contact@walesdampproofing.co.uk</a><br>
-        HOURS &nbsp;Mon&ndash;Fri 8am&ndash;6pm
-      </p>
+      <p style="font-family:var(--f-mono);font-size:15px;line-height:2.1;color:var(--stone)">FFÔN &nbsp;<a href="tel:+447446522034" style="color:var(--rose);text-decoration:none">07446 522034</a><br> E-BOST &nbsp;<a href="mailto:contact@walesdampproofing.co.uk" style="color:var(--rose);text-decoration:none">contact@walesdampproofing.co.uk</a><br> ORIAU &nbsp;Llun&ndash;Gwener 8am&ndash;6pm</p>
       <div class="btnrow"><a class="btn btn--go" href="/cy/request">Gofyn am arolwg</a></div>
     </div>
   </div>

@@ -153,6 +153,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -175,6 +178,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -416,8 +420,8 @@ table.cmp td b{font-weight:700}
 <section class="hero short">
   <div class="wrap">
     <p class="eyebrow">Gofyn am arolwg</p>
-    <h1>Tell us what<br>you're seeing.</h1>
-    <p class="lede">We'll come back with a fee, a date, and an honest view on whether you need a survey at all.</p>
+    <h1>Dywedwch wrthym<br>beth rydych yn ei weld.</h1>
+    <p class="lede">Byddwn yn dod yn ôl gyda ffi, dyddiad, a barn onest ynghylch a oes angen arolwg arnoch o gwbl.</p>
   </div>
 </section>
 
@@ -425,13 +429,13 @@ table.cmp td b{font-weight:700}
   <div class="wrap">
     <div class="cta-grid">
       <div class="cta-copy" style="color:var(--ink)">
-        <p class="eyebrow">What happens next</p>
+        <p class="eyebrow">Beth sy'n digwydd nesaf</p>
         <h2 style="color:var(--ink)">Un ateb, gan arolygydd.</h2>
         <p style="color:var(--mid)">Dim canolfan alwadau, dim mynd ar ôl, a dim ymweliad wedi'i archebu cyn i chi gael ffi ysgrifenedig.</p>
         <ul class="cta-points" style="margin-top:22px">
-          <li style="color:var(--ink)"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--red)"><path d="M20 6 9 17l-5-5"/></svg>Fee quoted in writing before we attend</li>
-          <li style="color:var(--ink)"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--red)"><path d="M20 6 9 17l-5-5"/></svg>Survey fee comes off the works if you instruct us</li>
-          <li style="color:var(--ink)"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--red)"><path d="M20 6 9 17l-5-5"/></svg>Costed schedule you can take to any contractor</li>
+          <li style="color:var(--ink)"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--red)"><path d="M20 6 9 17l-5-5"/></svg>Ffi wedi'i dyfynnu'n ysgrifenedig cyn i ni ymweld</li>
+          <li style="color:var(--ink)"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--red)"><path d="M20 6 9 17l-5-5"/></svg>Daw'r ffi arolwg oddi ar y gwaith os byddwch yn ein cyfarwyddo</li>
+          <li style="color:var(--ink)"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--red)"><path d="M20 6 9 17l-5-5"/></svg>Amserlen gostiedig y gallwch fynd â hi at unrhyw gontractwr</li>
         </ul>
         <div class="cta-contacts" style="border-top-color:var(--line)">
           <div><div class="lbl">Ffonio</div><div class="val"><a href="tel:+447446522034" style="color:var(--ink)">07446 522034</a></div></div>
@@ -444,7 +448,7 @@ table.cmp td b{font-weight:700}
           <h3>Gofyn am arolwg</h3>
           <p class="sub">Enw, e-bost a chod post yw'r cyfan sydd ei angen arnom i ddod yn ôl atoch.</p>
           <div class="f-row">
-            <div class="f-field"><label for="f-name">Enw</label><input id="f-name" type="text" required placeholder="Your name"></div>
+            <div class="f-field"><label for="f-name">Enw</label><input id="f-name" type="text" required placeholder="Eich enw"></div>
             <div class="f-field"><label for="f-postcode">Cod post</label><input id="f-postcode" type="text" required placeholder="CF10 1AA"></div>
           </div>
           <div class="f-row">
@@ -452,20 +456,20 @@ table.cmp td b{font-weight:700}
             <div class="f-field"><label for="f-phone">Ffôn</label><input id="f-phone" type="tel" placeholder="07…"></div>
           </div>
           <div class="f-row">
-            <div class="f-field"><label for="f-tenure">You are</label>
+            <div class="f-field"><label for="f-tenure">Rydych chi'n</label>
               <select id="f-tenure">
                 <option>Perchennog tŷ</option>
                 <option>Prynu neu werthu</option>
                 <option>Landlord preifat neu asiant</option>
                 <option>Cyngor neu gymdeithas dai</option>
                 <option>Deiliad contract (tenant)</option>
-                <option>Solicitor or surveyor</option>
+                <option>Cyfreithiwr neu arolygydd</option>
               </select>
             </div>
             <div class="f-field"><label for="f-type">Eiddo</label>
               <select id="f-type">
-                <option>Terraced house</option>
-                <option>Semi-detached</option>
+                <option>Tŷ teras</option>
+                <option>Lled-ar-wahân</option>
                 <option>Tŷ ar wahân</option>
                 <option>Fflat neu ddeulawr</option>
                 <option>Bwthyn neu eiddo gwledig</option>
@@ -474,15 +478,15 @@ table.cmp td b{font-weight:700}
             </div>
           </div>
           <div class="f-row">
-            <div class="f-field full"><label for="f-msg">What are you seeing?</label><textarea id="f-msg" placeholder="Tide mark in the back bedroom, worse after rain, render is cracked outside…"></textarea></div>
+            <div class="f-field full"><label for="f-msg">Beth rydych yn ei weld?</label><textarea id="f-msg" placeholder="Ôl llanw yn yr ystafell wely gefn, gwaeth ar ôl glaw, mae'r rendr wedi cracio y tu allan…"></textarea></div>
           </div>
           <input type="text" id="f-hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-          <button type="submit" class="f-submit">Send request</button>
+          <button type="submit" class="f-submit">Anfon cais</button>
         </div>
         <div class="f-confirm">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
-          <h3 style="text-transform:none;letter-spacing:0">Request received</h3>
-          <p>Thanks — we'll come back to you with a fee, a date, and an honest view on whether you need a survey at all.</p>
+          <h3 style="text-transform:none;letter-spacing:0">Cais wedi'i dderbyn</h3>
+          <p>Diolch — byddwn yn dod yn ôl atoch gyda ffi, dyddiad, a barn onest ynghylch a oes angen arolwg arnoch o gwbl.</p>
         </div>
       </form>
     </div>

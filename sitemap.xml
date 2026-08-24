@@ -1,21 +1,328 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.walesdampproofing.co.uk/</loc><lastmod>2026-08-16</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/surveys</loc><lastmod>2026-08-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/damp</loc><lastmod>2026-08-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/timber</loc><lastmod>2026-08-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/landlords</loc><lastmod>2026-08-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/areas</loc><lastmod>2026-08-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/about</loc><lastmod>2026-08-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/request</loc><lastmod>2026-08-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/bangor</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/llangefni</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/menai-bridge</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/caernarfon</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/holyhead</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/amlwch</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/conwy</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/llandudno</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/colwyn-bay</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.walesdampproofing.co.uk/rhyl</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/about</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/about"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/about"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/about</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/about"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/about"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/amlwch</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/amlwch"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/amlwch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/amlwch"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/amlwch</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/amlwch"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/amlwch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/amlwch"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/areas</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/areas"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/areas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/areas"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/areas</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/areas"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/areas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/areas"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/bangor</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/bangor"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/bangor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/bangor"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/bangor</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/bangor"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/bangor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/bangor"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/caernarfon</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/caernarfon"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/caernarfon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/caernarfon"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/caernarfon</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/caernarfon"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/caernarfon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/caernarfon"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/colwyn-bay</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/colwyn-bay"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/colwyn-bay"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/colwyn-bay"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/colwyn-bay</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/colwyn-bay"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/colwyn-bay"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/colwyn-bay"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/conwy</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/conwy"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/conwy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/conwy"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/conwy</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/conwy"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/conwy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/conwy"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/damp</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/damp"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/damp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/damp"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/damp</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/damp"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/damp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/damp"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/holyhead</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/holyhead"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/holyhead"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/holyhead"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/holyhead</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/holyhead"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/holyhead"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/holyhead"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/landlords</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/landlords"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/landlords"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/landlords"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/landlords</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/landlords"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/landlords"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/landlords"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/llandudno</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/llandudno"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/llandudno"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/llandudno"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/llandudno</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/llandudno"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/llandudno"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/llandudno"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/llangefni</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/llangefni"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/llangefni"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/llangefni"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/llangefni</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/llangefni"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/llangefni"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/llangefni"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/menai-bridge</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/menai-bridge"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/menai-bridge"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/menai-bridge"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/menai-bridge</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/menai-bridge"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/menai-bridge"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/menai-bridge"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/request</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/request"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/request"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/request"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/request</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/request"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/request"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/request"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/rhyl</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/rhyl"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/rhyl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/rhyl"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/rhyl</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/rhyl"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/rhyl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/rhyl"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/surveys</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/surveys"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/surveys"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/surveys"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/surveys</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/surveys"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/surveys"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/surveys"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/timber</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/timber"/>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/timber"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/timber"/>
+  </url>
+  <url>
+    <loc>https://www.walesdampproofing.co.uk/cy/timber</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cy" href="https://www.walesdampproofing.co.uk/cy/timber"/>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://www.walesdampproofing.co.uk/timber"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.walesdampproofing.co.uk/timber"/>
+  </url>
 </urlset>

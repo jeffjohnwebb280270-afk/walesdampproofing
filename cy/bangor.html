@@ -168,6 +168,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -190,6 +193,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -443,10 +447,10 @@ table.cmp td b{font-weight:700}
 <div class="band">
   <div class="wrap">
     <p class="eyebrow">Y stoc leol</p>
-    <h2>What Bangor is built from.</h2>
+    <h2>O beth mae Bangor wedi'i adeiladu.</h2>
     <div class="cols cols-2">
-      <div class="card"><span class="tag">Upper Bangor &amp; Glanrafon</span><h3>Victorian terraces, slate-hung and rendered</h3><p>Solid stone walls, many slate-hung on the weather elevation and re-rendered in cement at some point since. Cement traps water in a wall built to release it, and the render then cracks at the junctions where it meets slate. The damp shows up internally a full storey below the actual defect.</p></div>
-      <div class="card"><span class="tag">Student HMOs</span><h3>Deiliadaeth uchel, awyru isel, naw mis y flwyddyn</h3><p>The commonest damp problem in Bangor by a wide margin. Six people in a four-bedroom terrace, drying washing indoors through a Gwynedd winter, with an extractor that was disconnected years ago and windows that no longer open. It is condensation, it is a ventilation defect, and it is not solved by injecting the walls.</p></div>
+      <div class="card"><span class="tag">Bangor Uchaf a Glanrafon</span><h3>Terasau Fictoraidd, wedi'u llechu a'u rendro</h3><p>Waliau carreg solet, llawer wedi'u llechu ar y drychiad tywydd a'u hail-rendro mewn sment ryw bryd ers hynny. Mae sment yn dal dŵr mewn wal a adeiladwyd i'w ryddhau, ac mae'r rendr wedyn yn cracio wrth y cyffyrdd lle mae'n cwrdd â llechi. Mae'r lleithder yn ymddangos y tu mewn lawr cyfan islaw'r gwir ddiffyg.</p></div>
+      <div class="card"><span class="tag">HMOs myfyrwyr</span><h3>Deiliadaeth uchel, awyru isel, naw mis y flwyddyn</h3><p>Y broblem lleithder fwyaf cyffredin ym Mangor o gryn dipyn. Chwe pherson mewn teras pedair ystafell wely, yn sychu dillad dan do trwy gaeaf Gwynedd, gydag echdynnydd a ddatgysylltwyd flynyddoedd yn ôl a ffenestri nad ydynt yn agor mwyach. Cyddwysiad ydyw, diffyg awyru ydyw, ac ni chaiff ei ddatrys trwy chwistrellu'r waliau.</p></div>
       <div class="card"><span class="tag">Hirael a'r glannau</span><h3>Amlygiad oddi ar Afon Menai</h3><p>Glaw a yrrir yn syth oddi ar y dŵr ar ddrychiadau heb ddim o'u blaenau. Mae lleithder treiddiol yma'n crynhoi ar yr wyneb de-orllewinol ac o amgylch agoriadau — siliau, cilfachau a phen ffenestri bae sy'n dioddef fwyaf.</p></div>
       <div class="card"><span class="tag">Maesgeirchen a stadau ôl-ryfel</span><h3>Waliau ceudod, wedi'u pontio</h3><p>Tai ceudod rhyng-ryfel ac ôl-ryfel lle mae'r methiant fel arfer yn ddiferion morter ar glymau wal, ceudod wedi'i bontio wrth gyffordd estyniad, neu dir wedi'i godi uwchlaw'r cwrs atal lleithder gan batio neu ystafell wydr a ychwanegwyd yn ddidwyll.</p></div>
     </div>
@@ -455,7 +459,7 @@ table.cmp td b{font-weight:700}
 
 <div class="band band--tint">
   <div class="wrap">
-    <p class="eyebrow">The weather</p>
+    <p class="eyebrow">Y tywydd</p>
     <h2>Mae'r glawiad yn gwneud hanner y gwaith.</h2>
     <p class="lede">Mae Bangor wrth droed Eryri, ac mae rhannau o'r dalgylch hwnnw'n cael ymhlith y glawiad uchaf yn unrhyw le yn y Deyrnas Unedig. Nid yw wal a fyddai'n sychu rhwng cawodydd yng Nghaerdydd byth yn cael y cyfle yma. Mae hynny'n newid y diagnosis: yn yr hinsawdd hon mae gallu wal i anadlu'n bwysicach nag unrhyw gemegyn, ac mae rendr anathraidd yn fai yn hytrach nag yn atgyweiriad.</p>
     <p class="lede">Mae hefyd yn golygu bod amseru tymhorol yn real. Gall arolwg ym mis Chwefror a'r un arolwg ym mis Gorffennaf ddarllen yn wahanol iawn, a'r un ym mis Chwefror yw'r un onest fel arfer.</p>
@@ -483,7 +487,7 @@ table.cmp td b{font-weight:700}
       <div class="card"><h3>Proffil lleithder mewnol</h3><p>Darlleniadau a gymerir ar wahanol uchderau ar draws y waliau yr effeithir arnynt, fel bod patrwm yn dod i'r amlwg yn hytrach nag un rhif.</p></div>
       <div class="card"><h3>Dadansoddiad halwynau</h3><p>Mae halwynau hygrosgopig yn gwahaniaethu lleithder codi go iawn oddi wrth ollyngiad neu gyddwysiad. Dyma'r prawf y mae'r rhan fwyaf o ddyfynbrisiau triniaeth yn ei hepgor.</p></div>
       <div class="card"><h3>Arolygiad diffygion allanol</h3><p>Rendr, pwyntio, pibellau dŵr, lefelau'r tir, llechi. Mae'r achos y tu allan yn llawer amlach nag yn y wal.</p></div>
-      <div class="card"><h3>Amodau aer ac arwyneb</h3><p>Temperature, humidity and surface readings — the evidence that separates a ventilation problem from a water-ingress one.</p></div>
+      <div class="card"><h3>Amodau aer ac arwyneb</h3><p>Darlleniadau tymheredd, lleithder ac arwyneb — y dystiolaeth sy'n gwahanu problem awyru oddi wrth un dŵr yn treiddio.</p></div>
     </div>
     <p class="lede" style="margin-top:32px">Annibynnol ac yswiriedig. Rydym yn arolygu; nid ydym yn gwerthu triniaethau, felly nid oes dyfynbris yn aros ar ddiwedd yr adroddiad.</p>
   </div>

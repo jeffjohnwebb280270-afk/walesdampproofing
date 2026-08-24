@@ -168,6 +168,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -190,6 +193,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -430,11 +434,11 @@ table.cmp td b{font-weight:700}
 <main>
 <section class="hero short">
   <div class="wrap">
-    <p class="eyebrow">Rhyl, Denbighshire</p>
+    <p class="eyebrow">Y Rhyl, Sir Ddinbych</p>
     <h1>Tai gwesty a ddaeth yn<br>fflatiau, heb gael y llif aer.</h1>
-    <p class="lede">Rhyl's seafront and back streets are full of large Victorian and Edwardian guest houses converted into flats and shared houses. It is the most subdivided stock we work in, it has one of the largest private rented sectors in Wales, and damp complaints here are overwhelmingly ventilation.</p>
+    <p class="lede">Mae glan môr a strydoedd cefn y Rhyl yn llawn tai gwesty Fictoraidd ac Edwardaidd mawr wedi'u trosi'n fflatiau a thai a rennir. Dyma'r stoc fwyaf isranedig rydym yn gweithio ynddi, mae ganddi un o'r sectorau rhentu preifat mwyaf yng Nghymru, ac awyru'n bennaf yw cwynion lleithder yma.</p>
     <div class="btnrow">
-      <a class="btn btn--go" href="/cy/request">Request a survey in Rhyl</a>
+      <a class="btn btn--go" href="/cy/request">Gofyn am arolwg yn y Rhyl</a>
       <a class="btn" href="tel:+447446522034">07446 522034</a>
     </div>
   </div>
@@ -443,12 +447,12 @@ table.cmp td b{font-weight:700}
 <div class="band">
   <div class="wrap">
     <p class="eyebrow">Y stoc leol</p>
-    <h2>What Rhyl is built from.</h2>
+    <h2>O beth mae'r Rhyl wedi'i adeiladu.</h2>
     <div class="cols cols-2">
       <div class="card"><span class="tag">Tai gwesty wedi'u trosi</span><h3>Llawer o ystafelloedd, ychydig o lif aer</h3><p>Adeiladau a gynlluniwyd ar gyfer deiliadaeth dymhorol, wedi'u rhannu'n fflatiau parhaol. Ystafelloedd ymolchi mewnol, simneiau wedi'u blocio, ffenestri wedi'u selio ac echdynwyr sy'n awyru i mewn i wagleoedd. Y canlyniad yw cyddwysiad a llwydni mewn mannau rhagweladwy — corneli, cyffyrdd waliau allanol, y tu ôl i ddodrefn.</p></div>
       <div class="card"><span class="tag">HMOs</span><h3>Deiliadaeth na chynlluniwyd yr adeilad ar ei chyfer</h3><p>Mae'r llwyth lleithder yn codi gyda nifer y bobl. Bydd adeilad sy'n cynhyrchu pedair gwaith yr anwedd dŵr y'i hadeiladwyd ar ei gyfer, gyda llai o awyru nag oedd ganddo'n wreiddiol, yn tyfu llwydni beth bynnag y bydd unrhyw un yn ei wneud am sychu dillad.</p></div>
-      <div class="card"><span class="tag">Seafront exposure</span><h3>Glaw a yrrir gan y gwynt, a halen</h3><p>Drychiadau wedi'u rendro a'u graeanu'n wynebu môr agored, yn cymryd glaw a yrrir gan y gwynt yn llawn halen. Mae rendr chwyddedig a phlastr wedi'i halogi â halen yn gyffredin ac mae'r ddau'n cael eu camgymryd am leithder sy'n codi.</p></div>
-      <div class="card"><span class="tag">Terasau hŷn</span><h3>Rendr sment ar garreg a brics</h3><p>The familiar pattern: a wall built to breathe, sealed in cement, with ground levels raised at the back by later work.</p></div>
+      <div class="card"><span class="tag">Amlygiad glan môr</span><h3>Glaw a yrrir gan y gwynt, a halen</h3><p>Drychiadau wedi'u rendro a'u graeanu'n wynebu môr agored, yn cymryd glaw a yrrir gan y gwynt yn llawn halen. Mae rendr chwyddedig a phlastr wedi'i halogi â halen yn gyffredin ac mae'r ddau'n cael eu camgymryd am leithder sy'n codi.</p></div>
+      <div class="card"><span class="tag">Terasau hŷn</span><h3>Rendr sment ar garreg a brics</h3><p>Y patrwm cyfarwydd: wal a adeiladwyd i anadlu, wedi'i selio mewn sment, gyda lefelau tir wedi'u codi yn y cefn gan waith diweddarach.</p></div>
     </div>
   </div>
 </div>
@@ -457,7 +461,7 @@ table.cmp td b{font-weight:700}
   <div class="wrap">
     <p class="eyebrow">Gwerth ei wybod</p>
     <h2>Cwynion, cynghorau a'r gwaith papur.</h2>
-    <p class="lede">Rhyl has a lot of rented stock and a correspondingly active environmental health function. Local authorities assess hazards under the Housing Health and Safety Rating System, and damp and mould scores higher where a child, an older person or someone with a respiratory condition lives in the property.</p>
+    <p class="lede">Mae gan y Rhyl lawer o stoc rent a swyddogaeth iechyd yr amgylchedd weithredol yn unol â hynny. Mae awdurdodau lleol yn asesu peryglon o dan y System Mesur Iechyd a Diogelwch Tai, ac mae lleithder a llwydni'n sgorio'n uwch lle mae plentyn, person hŷn neu rywun â chyflwr anadlol yn byw yn yr eiddo.</p>
     <p class="lede">I landlord, mae arolwg annibynnol sy'n adnabod diffyg awyru ac yn nodi'r ateb yn wahaniaeth rhwng cwyn wedi'i datrys a hysbysiad gorfodi. I ddeiliad contract, mae'n dystiolaeth mai'r adeilad yw'r broblem yn hytrach na'r ffordd rydych yn byw ynddo.</p>
   </div>
 </div>
@@ -490,7 +494,7 @@ table.cmp td b{font-weight:700}
 
 <div class="band band--dark band--tight">
   <div class="wrap" style="text-align:center">
-    <p class="eyebrow" style="justify-content:center">Rhyl and the surrounding area</p>
+    <p class="eyebrow" style="justify-content:center">Y Rhyl a'r cyffiniau</p>
     <h2 style="color:var(--stone);max-width:22ch;margin:0 auto .4em">Darganfyddwch beth ydyw mewn gwirionedd.</h2>
     <p class="lede" style="margin:0 auto 6px">Dywedwch wrthym y cod post a beth rydych yn ei weld.</p>
     <div class="btnrow" style="justify-content:center"><a class="btn btn--go" href="/cy/request">Gofyn am arolwg</a></div>

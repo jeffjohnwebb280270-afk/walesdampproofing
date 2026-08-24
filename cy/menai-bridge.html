@@ -168,6 +168,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -190,6 +193,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -434,7 +438,7 @@ table.cmp td b{font-weight:700}
     <h1>Tai Fictoraidd mawr,<br>a'r dŵr o'u blaenau.</h1>
     <p class="lede">Tyfodd Porthaethwy pan agorodd y bont, a thyfodd yn urddasol — filâu Fictoraidd ac Edwardaidd sylweddol ar dir ar oledd uwchben y Fenai. Tai gwych, a chyfres o broblemau lleithder sy'n dod yn benodol gyda'r math hwnnw o adeilad yn y safle hwnnw.</p>
     <div class="btnrow">
-      <a class="btn btn--go" href="/cy/request">Request a survey in Menai Bridge</a>
+      <a class="btn btn--go" href="/cy/request">Gofyn am arolwg ym Mhorthaethwy</a>
       <a class="btn" href="tel:+447446522034">07446 522034</a>
     </div>
   </div>
@@ -443,12 +447,12 @@ table.cmp td b{font-weight:700}
 <div class="band">
   <div class="wrap">
     <p class="eyebrow">Y stoc leol</p>
-    <h2>What Menai Bridge is built from.</h2>
+    <h2>O beth mae Porthaethwy wedi'i adeiladu.</h2>
     <div class="cols cols-2">
-      <div class="card"><span class="tag">The villas</span><h3>Tai mawr, seleri, a thoeau hir</h3><p>Substantial detached and semi-detached stone houses, many with cellars and complex roofs. Valley gutters, hidden flat junctions behind parapets and long downpipe runs — one blocked outlet can put water into a wall for a year before anyone sees a mark.</p></div>
-      <div class="card"><span class="tag">Seleri</span><h3>Standing water and dry rot</h3><p>Mae seler heb fawr o awyru, dŵr yn sefyll o dan bibell ddŵr sy'n gollwng, a llawr pren uwch ei ben yn agos at yr amodau delfrydol ar gyfer pydredd sych. Dyma'r un canfyddiad sy'n werth gweithredu arno'r un wythnos, ac mae gan Borthaethwy'r stoc dai ar ei gyfer.</p></div>
-      <div class="card"><span class="tag">Strait exposure</span><h3>Glaw a yrrir oddi ar y dŵr</h3><p>Mae drychiadau sy'n wynebu'r Fenai'n cael glaw'n syth oddi ar ddŵr agored. Mae craciau rendr a methiannau cyffyrdd yn cyfrif llawer mwy yma nag y byddent yn fewndirol, ac mae'r difrod yn crynhoi o amgylch siliau, cilfachau a phennau bae.</p></div>
-      <div class="card"><span class="tag">Sloping ground</span><h3>Lefelau tir uwchlaw'r cwrs atal lleithder</h3><p>Wedi'u hadeiladu i mewn i lethr, felly mae'r tir yn y cefn yn aml ymhell uwchlaw'r lefel yn y ffrynt. Mae tir cefn uchel, patios diweddarach a waliau cynnal yn achos cyson o'r hyn a gaiff ei ddiagnosio fel lleithder sy'n codi.</p></div>
+      <div class="card"><span class="tag">Y filâu</span><h3>Tai mawr, seleri, a thoeau hir</h3><p>Tai carreg sylweddol ar wahân a lled-ar-wahân, llawer â seleri a thoeau cymhleth. Cwteri dyffryn, cyffyrdd gwastad cudd y tu ôl i barapetau a phibellau dŵr hir — gall un allfa wedi'i rhwystro roi dŵr mewn wal am flwyddyn cyn i neb weld marc.</p></div>
+      <div class="card"><span class="tag">Seleri</span><h3>Dŵr yn sefyll a phydredd sych</h3><p>Mae seler heb fawr o awyru, dŵr yn sefyll o dan bibell ddŵr sy'n gollwng, a llawr pren uwch ei ben yn agos at yr amodau delfrydol ar gyfer pydredd sych. Dyma'r un canfyddiad sy'n werth gweithredu arno'r un wythnos, ac mae gan Borthaethwy'r stoc dai ar ei gyfer.</p></div>
+      <div class="card"><span class="tag">Amlygiad y Fenai</span><h3>Glaw a yrrir oddi ar y dŵr</h3><p>Mae drychiadau sy'n wynebu'r Fenai'n cael glaw'n syth oddi ar ddŵr agored. Mae craciau rendr a methiannau cyffyrdd yn cyfrif llawer mwy yma nag y byddent yn fewndirol, ac mae'r difrod yn crynhoi o amgylch siliau, cilfachau a phennau bae.</p></div>
+      <div class="card"><span class="tag">Tir ar oledd</span><h3>Lefelau tir uwchlaw'r cwrs atal lleithder</h3><p>Wedi'u hadeiladu i mewn i lethr, felly mae'r tir yn y cefn yn aml ymhell uwchlaw'r lefel yn y ffrynt. Mae tir cefn uchel, patios diweddarach a waliau cynnal yn achos cyson o'r hyn a gaiff ei ddiagnosio fel lleithder sy'n codi.</p></div>
     </div>
   </div>
 </div>
@@ -458,7 +462,7 @@ table.cmp td b{font-weight:700}
     <p class="eyebrow">Gwerth ei wybod</p>
     <h2>Cyn prynu, gan amlaf.</h2>
     <p class="lede">Mae llawer o'r gwaith yma ar gyfer prynwyr. Mae fila Fictoraidd gyda seler, cwter ddyffryn a drychiad sy'n wynebu'r Fenai yn union y math o dŷ lle mae adroddiad prynwr tŷ yn dweud 'darlleniadau mesurydd lleithder uchel, cael adroddiad arbenigol' ac yn ei adael yno.</p>
-    <p class="lede">That sentence has sold a great many injection damp-proof courses that were never needed. An independent survey tells you which of the three or four possible causes it actually is, and what it will cost to put right — before you negotiate, not after.</p>
+    <p class="lede">Mae'r frawddeg honno wedi gwerthu nifer fawr o gyrsiau atal lleithder chwistrellu nad oedd eu hangen erioed. Mae arolwg annibynnol yn dweud wrthych pa un o'r tri neu bedwar achos posibl ydyw mewn gwirionedd, a beth fydd yn ei gostio i'w gywiro — cyn i chi negodi, nid wedyn.</p>
   </div>
 </div>
 

@@ -168,6 +168,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -190,6 +193,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -431,10 +435,10 @@ table.cmp td b{font-weight:700}
 <section class="hero short">
   <div class="wrap">
     <p class="eyebrow">Caergybi, Ynys Môn</p>
-    <h1>The most exposed housing<br>we survey anywhere.</h1>
+    <h1>Y tai mwyaf agored<br>rydym yn eu harolygu yn unman.</h1>
     <p class="lede">Mae Caergybi'n cymryd tywydd nad yw bron unman arall yng Nghymru'n ei gymryd. Mae glaw'r Iwerydd a Môr Iwerddon yn cyrraedd yn llorweddol heb ddim o'i flaen, yn cario halen, ar stoc sydd â waliau solet gan mwyaf ac yn hŷn gan mwyaf. Mae adeiladau yma'n methu mewn ffyrdd a fyddai'n anarferol ddeg milltir ar hugain i mewn i'r tir.</p>
     <div class="btnrow">
-      <a class="btn btn--go" href="/cy/request">Request a survey in Holyhead</a>
+      <a class="btn btn--go" href="/cy/request">Gofyn am arolwg yng Nghaergybi</a>
       <a class="btn" href="tel:+447446522034">07446 522034</a>
     </div>
   </div>
@@ -443,11 +447,11 @@ table.cmp td b{font-weight:700}
 <div class="band">
   <div class="wrap">
     <p class="eyebrow">Y stoc leol</p>
-    <h2>What Holyhead is built from.</h2>
+    <h2>O beth mae Caergybi wedi'i adeiladu.</h2>
     <div class="cols cols-2">
       <div class="card"><span class="tag">Glaw a yrrir gan y gwynt</span><h3>Llorweddol, llawn halen, di-baid</h3><p>Mae glaw sy'n cyrraedd o'r ochr yn mynd i mewn i uniadau na fyddent byth yn derbyn dŵr mewn safle cysgodol. Mae craciau rendr, pwyntio wedi methu a siliau agored yn cyfrif yn aruthrol yma, a'r drychiadau gorllewinol a de-orllewinol sy'n dioddef bron y cyfan.</p></div>
-      <div class="card"><span class="tag">Salt</span><h3>Nid yr un peth â lleithder sy'n codi</h3><p>Mae halen o'r awyr yn mynd i mewn i waith maen ger yr arfordir ac yn dal lleithder o'r aer, gan gynhyrchu clytiau llaith a phlastr chwyddedig sy'n edrych yn union fel lleithder sy'n codi ac nad ydynt. Mae dadansoddi halwynau yn gwahaniaethu rhwng y ddau — a dyma'r prawf y mae'r rhan fwyaf o ddyfynbrisiau triniaeth yn ei adael allan.</p></div>
-      <div class="card"><span class="tag">Terraces &amp; older rented stock</span><h3>Sector rhentu preifat mawr</h3><p>Mae cyfran fawr o derasau hŷn y dref yn cael eu gosod ar rent. Mae hynny'n golygu cwynion lleithder, ac o dan Ddeddf Rhentu Cartrefi (Cymru) mae'n golygu rhwymedigaethau addasrwydd nad ydynt yn diflannu am fod y tenant wedi cael y bai am sychu dillad.</p></div>
+      <div class="card"><span class="tag">Halen</span><h3>Nid yr un peth â lleithder sy'n codi</h3><p>Mae halen o'r awyr yn mynd i mewn i waith maen ger yr arfordir ac yn dal lleithder o'r aer, gan gynhyrchu clytiau llaith a phlastr chwyddedig sy'n edrych yn union fel lleithder sy'n codi ac nad ydynt. Mae dadansoddi halwynau yn gwahaniaethu rhwng y ddau — a dyma'r prawf y mae'r rhan fwyaf o ddyfynbrisiau triniaeth yn ei adael allan.</p></div>
+      <div class="card"><span class="tag">Terasau a stoc rent hŷn</span><h3>Sector rhentu preifat mawr</h3><p>Mae cyfran fawr o derasau hŷn y dref yn cael eu gosod ar rent. Mae hynny'n golygu cwynion lleithder, ac o dan Ddeddf Rhentu Cartrefi (Cymru) mae'n golygu rhwymedigaethau addasrwydd nad ydynt yn diflannu am fod y tenant wedi cael y bai am sychu dillad.</p></div>
       <div class="card"><span class="tag">Ymylon porthladd a diwydiannol</span><h3>Toeau mawr, cwteri hir</h3><p>Adeiladau mwy a stoc wedi'i throsi o amgylch y porthladd, gyda thoeau a chwteri digon hir fel bod un rhwystr yn rhoi dŵr mewn wal drwy'r gaeaf.</p></div>
     </div>
   </div>

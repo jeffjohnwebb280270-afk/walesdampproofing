@@ -168,6 +168,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -190,6 +193,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -443,12 +447,12 @@ table.cmp td b{font-weight:700}
 <div class="band">
   <div class="wrap">
     <p class="eyebrow">Y stoc leol</p>
-    <h2>What Amlwch is built from.</h2>
+    <h2>O beth mae Amlwch wedi'i adeiladu.</h2>
     <div class="cols cols-2">
-      <div class="card"><span class="tag">Terasau'r cyfnod mwyngloddio</span><h3>Small, solid, and re-rendered</h3><p>Terasau carreg cymedrol a godwyd o amgylch y diwydiant copr, bron pob un wedi'i rendro ers hynny. Lle mae'r rendr yn sment mae'n dal dŵr yn erbyn carreg sydd angen sychu tuag allan, ac mae'r methiannau'n dangos wrth gyffyrdd ac o amgylch agoriadau.</p></div>
-      <div class="card"><span class="tag">Rural cottages</span><h3>Thick walls, earth solums</h3><p>Rubble walls that hold water for weeks, floors laid close to the ground with minimal cross-ventilation, and later concrete and impermeable render sealing the whole thing. Sub-floor timber decay is the usual finding.</p></div>
-      <div class="card"><span class="tag">Amlygiad gogleddol llawn</span><h3>Salt and driven rain</h3><p>Drychiadau sy'n wynebu'r gogledd nad ydynt byth yn gweld llawer o haul ac sy'n cymryd tywydd oddi ar ddŵr agored. Mae sychu araf ynghyd â halen o'r awyr yn gyfuniad sy'n cynhyrchu lleithder parhaus heb ollyngiad y tu ôl iddo.</p></div>
-      <div class="card"><span class="tag">Second homes &amp; lets</span><h3>Wedi'i gau dros y gaeaf</h3><p>Mae eiddo a adewir heb ei gynhesu a heb ei awyru rhwng Hydref a'r Pasg yn tyfu llwydni waeth beth fo'r diffyg adeiladu. Cyffredin yma, a rheolaeth yw'r ateb, nid cemegyn.</p></div>
+      <div class="card"><span class="tag">Terasau'r cyfnod mwyngloddio</span><h3>Bach, solet, ac wedi'i ail-rendro</h3><p>Terasau carreg cymedrol a godwyd o amgylch y diwydiant copr, bron pob un wedi'i rendro ers hynny. Lle mae'r rendr yn sment mae'n dal dŵr yn erbyn carreg sydd angen sychu tuag allan, ac mae'r methiannau'n dangos wrth gyffyrdd ac o amgylch agoriadau.</p></div>
+      <div class="card"><span class="tag">Bythynnod gwledig</span><h3>Waliau trwchus, gwaelodion pridd</h3><p>Waliau rwbel sy'n dal dŵr am wythnosau, lloriau wedi'u gosod yn agos at y ddaear heb fawr o groes-awyru, ac yna concrit a rendr anathraidd diweddarach yn selio'r cyfan. Pydredd pren o dan y llawr yw'r canfyddiad arferol.</p></div>
+      <div class="card"><span class="tag">Amlygiad gogleddol llawn</span><h3>Halen a glaw a yrrir gan y gwynt</h3><p>Drychiadau sy'n wynebu'r gogledd nad ydynt byth yn gweld llawer o haul ac sy'n cymryd tywydd oddi ar ddŵr agored. Mae sychu araf ynghyd â halen o'r awyr yn gyfuniad sy'n cynhyrchu lleithder parhaus heb ollyngiad y tu ôl iddo.</p></div>
+      <div class="card"><span class="tag">Ail gartrefi a llety</span><h3>Wedi'i gau dros y gaeaf</h3><p>Mae eiddo a adewir heb ei gynhesu a heb ei awyru rhwng Hydref a'r Pasg yn tyfu llwydni waeth beth fo'r diffyg adeiladu. Cyffredin yma, a rheolaeth yw'r ateb, nid cemegyn.</p></div>
     </div>
   </div>
 </div>
@@ -456,7 +460,7 @@ table.cmp td b{font-weight:700}
 <div class="band band--tint">
   <div class="wrap">
     <p class="eyebrow">Gwerth ei wybod</p>
-    <h2>Small jobs are worth doing properly.</h2>
+    <h2>Mae gwaith bach yn werth ei wneud yn iawn.</h2>
     <p class="lede">Mae llawer o stoc Amlwch yn gymedrol, ac mae temtasiwn i hepgor arolwg a chael rhywun i mewn i'w drin. Dyna'r llwybr drud fel arfer: mae cwrs atal lleithder wedi'i chwistrellu mewn wal nad oedd erioed yn lleithder sy'n codi yn costio mwy na'r arolwg, ac mae'r lleithder yn dychwelyd.</p>
     <p class="lede">Mae bod wedi'n lleoli yn Llangefni'n golygu bod ymweliad â'r gogledd yn ugain munud, felly mae'r arolwg yn gymesur â'r gwaith.</p>
   </div>

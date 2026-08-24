@@ -153,6 +153,9 @@ nav.main a{
 }
 nav.main a:hover{border-bottom-color:var(--red)}
 nav.main a.on{border-bottom-color:var(--ink)}
+nav.main a.lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+nav.main a.lang:hover{border-color:var(--red);background:var(--red);color:var(--paper)}
 .callbar{background:var(--ink);color:rgba(230,227,233,.75)}
 .callbar .wrap{display:flex;gap:8px 20px;align-items:center;padding:8px 0;flex-wrap:wrap;
   font-family:var(--f-mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase}
@@ -175,6 +178,7 @@ nav.main a.on{border-bottom-color:var(--ink)}
   nav.main.open{transform:none}
   nav.main a{padding:14px 0;border-bottom:1px solid var(--line)}
   nav.main a:hover{border-bottom-color:var(--line)}
+  nav.main a.lang{align-self:flex-start;margin-top:10px;padding:8px 14px;border:1px solid var(--line)}
   .navtoggle{display:block}
   .hbar .btn{display:none}
 }
@@ -416,7 +420,7 @@ table.cmp td b{font-weight:700}
 <section class="hero short">
   <div class="wrap">
     <p class="eyebrow">Arolygon</p>
-    <h1>What a proper survey<br>actually involves.</h1>
+    <h1>Beth mae arolwg iawn<br>yn ei olygu mewn gwirionedd.</h1>
     <p class="lede">Naw deg munud, mesurydd lleithder, hygromedr, boresgop, ysgol, a rhywun sydd wedi agor digon o waliau Cymreig i wybod ar beth mae'n edrych.</p>
   </div>
 </section>
@@ -427,12 +431,12 @@ table.cmp td b{font-weight:700}
       <div class="diag"><p class="sig">Ar y safle</p><h3>Proffil lleithder mewnol</h3><p>Darlleniadau ar lefel sgyrtin, 300&nbsp;mm ac 1&nbsp;m ar bob drychiad yr effeithir arno, wedi'u plotio fel bod y patrwm yn weladwy yn hytrach na'i honni. Caiff darlleniadau arwyneb eu croeswirio â stiliau wal ddwfn, oherwydd mae mesurydd dargludedd yn darllen halen a ffoil mor frwd ag y mae'n darllen dŵr.</p></div>
       <div class="diag"><p class="sig">Ar y safle</p><h3>Amodau aer ac arwyneb</h3><p>Lleithder cymharol, tymheredd aer a thymheredd arwyneb wrth y mannau oer. Ar wal solet heb geudod dyma sy'n gwahanu cyddwysiad oddi wrth leithder sy'n cyrraedd trwy'r ffabrig, a dyma'r mesuriad y mae'r rhan fwyaf o arolygon am ddim yn ei hepgor yn llwyr.</p></div>
       <div class="diag"><p class="sig">Ar y safle</p><h3>Arolygiad diffygion allanol</h3><p>Cyflwr y rendr a'r craciau ynddo, lefelau tir yn erbyn y wal, awyru o dan y llawr, pwyntio, nwyddau dŵr glaw, pennau simneiau a fflachiadau — ac a yw'r wal yn gwisgo croen sment na chynlluniwyd iddi byth ei gario.</p></div>
-      <div class="diag"><p class="sig">Ar y safle</p><h3>Timber and sub-floor</h3><p>Pennau trawstiau lle maent yn eistedd mewn gwaith maen llaith, platiau wal, capanau a chynhalion, ynghyd â byrddyn wedi'i godi, arolygiad seler neu arolwg boresgop o'r gwagle lle mae mynediad yn caniatáu. Canfyddir pydredd o dan loriau'n llawer amlach nag arnynt.</p></div>
-      <div class="diag"><p class="sig">Where needed</p><h3>Dadansoddiad halwynau</h3><p>Profi nitrad a chlorid ar samplau wedi'u drilio. Mae halwynau'r ddaear yn cadarnhau lleithder sy'n codi; eu habsenoldeb yn aml yw'r un ffaith sy'n arbed sawl mil o bunnoedd i gleient, a wal yn llawn tyllau.</p></div>
-      <div class="diag"><p class="sig">Wedyn</p><h3>The report</h3><p>Ffotograffig, ystafell wrth ystafell, gyda'r diagnosis a'r dystiolaeth drosto, yna amserlen waith wedi'i rhannu'n frys, adferol a chynnal a chadw cyffredinol — wedi'i chostio, fel y gallwch ei phrisio yn erbyn dyfynbris unrhyw un arall.</p></div>
+      <div class="diag"><p class="sig">Ar y safle</p><h3>Pren ac o dan y llawr</h3><p>Pennau trawstiau lle maent yn eistedd mewn gwaith maen llaith, platiau wal, capanau a chynhalion, ynghyd â byrddyn wedi'i godi, arolygiad seler neu arolwg boresgop o'r gwagle lle mae mynediad yn caniatáu. Canfyddir pydredd o dan loriau'n llawer amlach nag arnynt.</p></div>
+      <div class="diag"><p class="sig">Lle bo angen</p><h3>Dadansoddiad halwynau</h3><p>Profi nitrad a chlorid ar samplau wedi'u drilio. Mae halwynau'r ddaear yn cadarnhau lleithder sy'n codi; eu habsenoldeb yn aml yw'r un ffaith sy'n arbed sawl mil o bunnoedd i gleient, a wal yn llawn tyllau.</p></div>
+      <div class="diag"><p class="sig">Wedyn</p><h3>Yr adroddiad</h3><p>Ffotograffig, ystafell wrth ystafell, gyda'r diagnosis a'r dystiolaeth drosto, yna amserlen waith wedi'i rhannu'n frys, adferol a chynnal a chadw cyffredinol — wedi'i chostio, fel y gallwch ei phrisio yn erbyn dyfynbris unrhyw un arall.</p></div>
     </div>
 
-    <div class="stamp">SURVEY FEE — quoted and confirmed in writing before attendance &middot; deducted from the cost of works if you instruct us &middot; written report issued after the visit</div>
+    <div class="stamp">FFI AROLWG — wedi'i dyfynnu a'i chadarnhau'n ysgrifenedig cyn ymweld &middot; wedi'i thynnu o gost y gwaith os byddwch yn ein cyfarwyddo &middot; adroddiad ysgrifenedig wedi'i gyhoeddi ar ôl yr ymweliad</div>
     <div class="btnrow"><a class="btn btn--go" href="/cy/request">Gofyn am arolwg</a></div>
   </div>
 </div>
@@ -441,10 +445,10 @@ table.cmp td b{font-weight:700}
   <div class="wrap split">
     <div>
       <p class="eyebrow">Prynu, gwerthu neu fenthyca</p>
-      <h2 style="color:var(--stone)">When a survey flags damp and the money stops.</h2>
+      <h2 style="color:var(--stone)">Pan fydd arolwg yn nodi lleithder a'r arian yn stopio.</h2>
     </div>
     <div>
-      <p style="color:rgba(230,227,233,.86)">Where a RICS Home Survey records dampness or timber decay, a lender will often hold a retention until a specialist report is produced. Wales has no statutory Home Report — that is a Scottish arrangement — so what a lender wants here is a dated specialist damp and timber report with a costed schedule of works.</p>
+      <p style="color:rgba(230,227,233,.86)">Lle mae Arolwg Cartref RICS yn cofnodi lleithder neu bydredd pren, bydd benthyciwr yn aml yn dal cadw'n ôl hyd nes y cynhyrchir adroddiad arbenigol. Nid oes gan Gymru Adroddiad Cartref statudol — trefniant Albanaidd yw hwnnw — felly'r hyn y mae benthyciwr ei eisiau yma yw adroddiad lleithder a phren arbenigol dyddiedig ag amserlen waith gostiedig.</p>
       <p style="color:rgba(230,227,233,.86)">Mae bron bob amser yn rhatach dal yr adroddiad hwnnw cyn y cynnig na'i ailnegodi wedyn. Rydym yn eu hysgrifennu i gael eu darllen gan fenthyciwr, cyfreithiwr a chontractwr heb fod angen cyfieithu.</p>
     </div>
   </div>
