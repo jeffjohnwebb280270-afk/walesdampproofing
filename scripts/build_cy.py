@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+"""Generate the Welsh site under /cy/ from the English pages.
+
+The Welsh pages are built, never hand-edited: English is the single source of
+truth for structure, and i18n/cy.json supplies the prose. Running this after any
+English edit keeps the two languages from drifting apart.
+
+It also patches the English pages in place, because the hreflang pairing and the
+language switcher have to exist on both sides to be worth anything.
+"""
+import json, os, re, sys
+import cy_lib as L
+
+SITE = 'https://www.walesdampproofing.co.uk'
+OUT = os.path.join(L.ROOT, 'cy')
+
+# Slugs that are pages, so /cy/ prefixing does not catch /favicon.svg.
+SLUGS = {p[:-5] for p in L.pages()}
+
+MARK = '<!--i18n-->'   # so the injected block can be replaced, not duplicated
+
+
+def path_for(name):
+    return '/' if name == 'index.html' else '/' + name[:-5]
+
+
+def alternates(name):
+    en, cy = path_for(name), '/cy' + path_for(name)
+    if cy.endswith('/cy/'):
+        cy = '/cy/'
+    return (f'{MARK}\n'
+            f'<link rel="alternate" hreflang="en-GB" href="{SITE}{en}">\n'
+            f'<link rel="alternate" hreflang="cy" href="{SITE}{cy}">\n'
+            f'<link rel="alternate" hreflang="x-default" href="{SITE}{en}">')
+
+
+def inject_head(html, block):
+    """Put the alternates just before </head>, replacing any earlier run's."""
+    html = re.sub(re.escape(MARK) + r'\n(?:<link rel="alternate"[^>]*>\n?)*', '', html)
+    return html.replace('</head>', block + '\n</head>', 1)
+
+
+def switcher(html, href, label, lang):
+    """Add or update the other language's link at the end of the main nav."""
+    html = re.sub(r'\s*<a class="lang"[^>]*>.*?</a>', '', html, flags=re.S)
+    link = (f'\n      <a class="lang" href="{href}" hreflang="{lang}" '
+            f'lang="{lang}" rel="alternate">{label}</a>')
+    return html.replace('    </nav>', link + '\n    </nav>', 1)
+
+
+def relink(html):
+    """Point page links, canonical and og:url at the Welsh copies."""
+    def href(m):
+        slug = m.group(2)
+        if slug == '/' or slug.lstrip('/') in SLUGS:
+            return f'{m.group(1)}="/cy{"" if slug == "/" else slug}{"/" if slug == "/" else ""}"'
+        return m.group(0)
+    html = re.sub(r'\b(href|action)="(/[^":]*)"', href, html)
+    # Absolute self-references in canonical, og:url and JSON-LD.
+    def absolute(m):
+        tail = m.group(1)
+        if tail in ('', '/') or tail.strip('/') in SLUGS:
+            return SITE + '/cy' + (tail if tail not in ('', '/') else '/')
+        return m.group(0)
+    return re.sub(re.escape(SITE) + r'(/[\w-]*/?|)(?=["\s])', absolute, html)
+
+
+def translate(html, table, missing):
+    spans = [(a, b, None) for a, b in L.segments(html)]
+    spans += [(a, b, v) for a, b, v in L.jsonld_spans(html)]
+    for start, end, jsonval in sorted(spans, reverse=True):
+        if jsonval is not None:
+            cy = table.get(L.norm(jsonval))
+            if cy is None:
+                missing.add(L.norm(jsonval))
+                continue
+            # Re-encode so quotes and backslashes stay legal inside the JSON.
+            html = html[:start] + json.dumps(cy, ensure_ascii=False)[1:-1] + html[end:]
+            continue
+        key, kept = L.mask(html[start:end])
+        if not L.translatable(key):
+            continue
+        cy = table.get(key)
+        if cy is None:
+            missing.add(key)
+            continue
+        html = html[:start] + L.unmask(cy, kept) + html[end:]
+    return html
+
+
+def audit(name, html):
+    """Welsh runs longer than English, so titles and descriptions drift over
+    the length Google will show. Report anything that has."""
+    import re as _re
+    out = []
+    m = _re.search(r'<title>(.*?)</title>', html, _re.S)
+    if m and len(L.norm(m.group(1))) > 60:
+        out.append(f'{name}: title {len(L.norm(m.group(1)))} chars')
+    m = _re.search(r'<meta name="description" content="(.*?)"', html, _re.S)
+    if m and len(L.norm(m.group(1))) > 158:
+        out.append(f'{name}: description {len(L.norm(m.group(1)))} chars')
+    return out
+
+
+def build():
+    table = L.load('cy.json')
+    missing, long_meta = set(), []
+    os.makedirs(OUT, exist_ok=True)
+    for name in L.pages():
+        src = open(os.path.join(L.ROOT, name), encoding='utf-8').read()
+
+        # English side: pair it with the Welsh page and offer the switch.
+        en = inject_head(src, alternates(name))
+        cy_href = '/cy' + path_for(name)
+        en = switcher(en, '/cy/' if cy_href == '/cy/' else cy_href, 'Cymraeg', 'cy')
+        if en != src:
+            open(os.path.join(L.ROOT, name), 'w', encoding='utf-8').write(en)
+
+        # Welsh side, generated from the English source. The switcher is
+        # stripped first: it is re-added below in the other language.
+        bare = re.sub(r'\s*<a class="lang"[^>]*>.*?</a>', '', src, flags=re.S)
+        out = translate(bare, table, missing)
+        out = relink(out)
+        out = out.replace('<html lang="en-GB">', '<html lang="cy">', 1)
+        out = out.replace('<meta property="og:locale" content="en_GB">', '', 1)
+        out = out.replace('</head>', '<meta property="og:locale" content="cy">\n</head>', 1)
+        out = inject_head(out, alternates(name))
+        out = switcher(out, path_for(name), 'English', 'en-GB')
+        open(os.path.join(OUT, name), 'w', encoding='utf-8').write(out)
+        long_meta.extend(audit(name, out))
+
+    done = sum(1 for _ in table)
+    print(f'built {len(L.pages())} Welsh pages, {done} strings translated, '
+          f'{len(missing)} still English', file=sys.stderr)
+    for line in long_meta:
+        print('  over length: ' + line, file=sys.stderr)
+    if missing:
+        json.dump(sorted(missing), open(os.path.join(L.ROOT, 'i18n', 'cy.todo.json'),
+                                        'w', encoding='utf-8'),
+                  ensure_ascii=False, indent=1)
+    return len(missing)
+
+
+if __name__ == '__main__':
+    sys.exit(0 if build() == 0 else 0)
