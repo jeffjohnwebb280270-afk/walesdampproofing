@@ -7,6 +7,7 @@ the fragments cannot be swapped back one for one. Instead this module finds
 "leaf blocks" — elements whose children are only text and inline markup — and
 treats the whole inner HTML of each as a single translatable unit.
 """
+import html as html_mod
 import json, os, re
 from html.parser import HTMLParser
 
@@ -100,7 +101,7 @@ class Segmenter(HTMLParser):
         for k, v in wanted:
             # Locate the value inside the raw tag text so the span is exact.
             m = re.search(re.escape(k) + r'\s*=\s*(["\'])(.*?)\1', raw, re.S | re.I)
-            if m and m.group(2) == v:
+            if m and html_mod.unescape(m.group(2)) == v:
                 self.attrs.append((tag_start + m.start(2), tag_start + m.end(2)))
 
     def handle_starttag(self, tag, attrs):
