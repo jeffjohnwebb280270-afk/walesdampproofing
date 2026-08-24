@@ -161,11 +161,19 @@ def jsonld_spans(html):
     for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>',
                          html, re.S):
         body, base = m.group(1), m.start(1)
+        breadcrumb = '"BreadcrumbList"' in body
         for f in re.finditer(
-                r'"(name|description|alternateName)"\s*:\s*"((?:[^"\\]|\\.)*)"', body):
+                r'"(name|description)"\s*:\s*"((?:[^"\\]|\\.)*)"', body):
             val = json.loads('"' + f.group(2) + '"')
-            if translatable(val) and len(val.split()) > 1:
-                out.append((base + f.start(2), base + f.end(2), val))
+            if not translatable(val):
+                continue
+            # A `name` is a canonical identifier — an organisation, a person, a
+            # city, a certificate — and stays in English so the structured data
+            # keeps naming the same entity in both languages. Inside a
+            # BreadcrumbList it is a navigation label instead, and localises.
+            if f.group(1) == 'name' and not breadcrumb:
+                continue
+            out.append((base + f.start(2), base + f.end(2), val))
     return out
 
 

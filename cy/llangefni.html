@@ -40,7 +40,7 @@
   "email": "contact@walesdampproofing.co.uk",
   "areaServed": [
     { "@type": "City", "name": "Llangefni", "containedInPlace": { "@type": "AdministrativeArea", "name": "Ynys Môn" } },
-    { "@type": "City", "name": "Porthaethwy" },
+    { "@type": "City", "name": "Menai Bridge" },
     { "@type": "City", "name": "Amlwch" }
   ],
   "priceRange": "££",
@@ -50,7 +50,7 @@
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "certificate",
-      "name": "Technegydd Cymwysedig PCA (PCAQT) — Lleithder a Phren",
+      "name": "PCA Qualified Technician (PCAQT) — Damp and Timber",
       "identifier": "957",
       "dateCreated": "2024-05-01",
       "recognizedBy": { "@type": "Organization", "name": "Property Care Association" }
@@ -63,7 +63,7 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.walesdampproofing.co.uk/cy/" },
+    { "@type": "ListItem", "position": 1, "name": "Cartref", "item": "https://www.walesdampproofing.co.uk/cy/" },
     { "@type": "ListItem", "position": 2, "name": "Lle rydym yn gweithio", "item": "https://www.walesdampproofing.co.uk/cy/areas" },
     { "@type": "ListItem", "position": 3, "name": "Llangefni" }
   ]
@@ -71,7 +71,7 @@
 </script>
 <style>
 /* ============================================================
-   SCOTLAND DAMP PROOFING
+   WALES DAMP PROOFING
    Palette derived from the fabric we survey:
    wet slate, blonde sandstone, and the yellow of a moisture meter.
    ============================================================ */
@@ -597,9 +597,9 @@ document.querySelectorAll('.acc button').forEach(b=>{
   const iv = setInterval(()=>{ v += 1.1; if(v >= target){ v = target; clearInterval(iv);} if(wme) wme.textContent = v.toFixed(1); }, 34);
 
   const notes = {
-    rising:['24.8','Elevated at skirting, falling away above 900 mm, with a defined tide line. Ground salts must be tested before any injected course is specified.'],
-    penetrating:['38.1','Saturation behind cracked cement render on a solid stone wall. The render holds the water in; the wall was built to let it out.'],
-    condensation:['17.2','Fabric is dry. Surface temperature 10.9 °C against 68% RH — this is condensation on a cold solid wall, not moisture coming through it.']
+    rising:['24.8','Uchel ar lefel sgyrtin, yn gostwng uwchlaw 900 mm, gyda llinell llanw bendant. Rhaid profi halwynau\'r ddaear cyn nodi unrhyw gwrs chwistrellu.'],
+    penetrating:['38.1','Dirlawnder y tu ôl i rendr sment wedi cracio ar wal garreg solet. Mae\'r rendr yn dal y dŵr i mewn; adeiladwyd y wal i\'w ollwng allan.'],
+    condensation:['17.2','Mae\'r ffabrig yn sych. Tymheredd arwyneb 10.9 °C yn erbyn 68% RH — cyddwysiad ar wal solet oer yw hyn, nid lleithder yn dod trwyddi.']
   };
   document.querySelectorAll('.wall .pin').forEach(p=>{
     const fire = ()=>{
@@ -630,18 +630,18 @@ document.querySelectorAll('.acc button').forEach(b=>{
       tenure:get('f-tenure'), message:get('f-msg'), hp:get('f-hp')
     };
     if(!payload.name || !payload.email || !payload.postcode){
-      flash('Name, email and postcode, then it goes.'); return;
+      flash('Enw, e-bost a chod post, ac mae\'n mynd.'); return;
     }
     btn.disabled = true;
     const label = btn.textContent;
-    btn.textContent = 'Sending…';
+    btn.textContent = 'Anfon…';
     try{
       const r = await fetch('/api/enquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
       if(!r.ok){ const j = await r.json().catch(()=>({})); throw new Error(j.error||'failed'); }
       form.classList.add('submitted');
     }catch(err){
       btn.disabled = false; btn.textContent = label;
-      flash('That did not send — call ' + '07446 522034' + ' or email ' + 'contact@walesdampproofing.co.uk' + ' and we will pick it up directly.', true);
+      flash('Wnaeth hynny ddim anfon — ffoniwch ' + '07446 522034' + ' neu e-bostiwch ' + 'contact@walesdampproofing.co.uk' + ' a byddwn yn ymdrin ag ef yn uniongyrchol.', true);
     }
   });
   function flash(msg, persist){
