@@ -1,0 +1,97 @@
+/* Print styling for the landlord pack.
+   The site's palette, adapted for paper: white ground, ink text, the one red
+   accent. Font stacks resolve to Liberation/DejaVu on the build machine and to
+   Arial/Georgia on a landlord's, which keeps the metrics close either way. */
+:root{
+  --ink:#15131B;
+  --slate:#443B52;
+  --mid:#5F5A68;
+  --red:#C8102E;
+  --line:#D4D0DA;
+  --wash:#F4F3F6;
+  --f-display:'Archivo','Liberation Sans',Arial,Helvetica,sans-serif;
+  --f-body:'Newsreader','Liberation Serif',Georgia,'Times New Roman',serif;
+  --f-mono:'IBM Plex Mono','Liberation Mono','DejaVu Sans Mono',monospace;
+}
+@page{ size:A4; margin:16mm 15mm 18mm; }
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:var(--f-body); color:var(--ink);
+  font-size:10.4pt; line-height:1.5;
+}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;letter-spacing:-.015em;margin:0 0 .4em}
+h1{font-size:21pt;line-height:1.08;font-weight:800}
+h2{font-size:13pt;margin-top:1.5em;padding-bottom:5px;border-bottom:1.5px solid var(--ink)}
+h3{font-size:10.8pt;margin-top:1.2em;margin-bottom:.25em}
+p{margin:0 0 .7em;max-width:none}
+a{color:var(--ink);text-decoration:none}
+strong{font-weight:700}
+
+.eyebrow{
+  font-family:var(--f-mono);font-size:7.6pt;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--mid);margin:0 0 10px;
+}
+.lede{font-size:11.6pt;line-height:1.45;color:var(--slate);margin-bottom:1em}
+.small{font-size:8.8pt;line-height:1.45;color:var(--mid)}
+
+/* masthead ------------------------------------------------- */
+.mast{display:flex;align-items:center;gap:11px;padding-bottom:12px;
+  border-bottom:2.5px solid var(--ink);margin-bottom:20px}
+.mast svg{width:24px;height:31px;flex:none}
+.mast svg path{fill:var(--ink)}
+.mast .who b{display:block;font-family:var(--f-display);font-size:12.5pt;
+  font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.mast .who span{font-family:var(--f-mono);font-size:7pt;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--mid)}
+.mast .contact{margin-left:auto;text-align:right;font-family:var(--f-mono);
+  font-size:7.8pt;line-height:1.6;color:var(--mid)}
+
+/* blocks --------------------------------------------------- */
+.rule{border-top:1px solid var(--line);margin:18px 0}
+.wash{background:var(--wash);border-left:3px solid var(--red);
+  padding:12px 15px;margin:14px 0}
+.wash p:last-child{margin-bottom:0}
+
+.cols{display:flex;gap:16px;margin:12px 0}
+.cols > *{flex:1}
+
+ul{margin:0 0 .8em;padding-left:16px}
+li{margin-bottom:4px}
+ul.ticks{list-style:none;padding-left:0}
+ul.ticks li{padding-left:17px;position:relative}
+ul.ticks li::before{content:"";position:absolute;left:0;top:.42em;
+  width:7px;height:7px;background:var(--red)}
+
+/* clock cards ---------------------------------------------- */
+.clocks{display:flex;gap:9px;margin:14px 0 4px}
+.clocks div{flex:1;border:1px solid var(--line);border-top:3px solid var(--red);
+  padding:11px 12px}
+.clocks b{display:block;font-family:var(--f-mono);font-size:15pt;font-weight:600;
+  color:var(--red);letter-spacing:-.03em;line-height:1;margin-bottom:6px}
+.clocks .k{font-family:var(--f-display);font-size:9pt;font-weight:700;
+  display:block;margin-bottom:4px}
+.clocks p{font-size:8.6pt;line-height:1.4;color:var(--mid);margin:0}
+
+/* tables --------------------------------------------------- */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:9.2pt}
+th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);
+  vertical-align:top}
+th{font-family:var(--f-mono);font-size:7.4pt;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mid);border-bottom:1.5px solid var(--ink)}
+td b{font-family:var(--f-display);font-weight:700}
+
+/* the blanks Jeff fills in --------------------------------- */
+.fill{background:#FFF3B0;border-bottom:1px solid #C9A227;padding:1px 5px;
+  font-family:var(--f-mono);font-size:8.4pt;color:#6B5200}
+
+/* footer --------------------------------------------------- */
+/* A fixed footer with a negative offset overflows the page box and Chromium
+   emits a spurious extra page for it, so the footer sits in normal flow. */
+.foot{margin-top:22px;
+  font-family:var(--f-mono);font-size:7pt;letter-spacing:.06em;color:var(--mid);
+  border-top:1px solid var(--line);padding-top:5px;
+  display:flex;gap:14px;break-inside:avoid}
+.foot .r{margin-left:auto}
+.note{font-family:var(--f-mono);font-size:7.4pt;line-height:1.55;
+  letter-spacing:.02em;color:var(--mid);border:1px dashed var(--line);
+  padding:10px 12px;margin-top:16px}
